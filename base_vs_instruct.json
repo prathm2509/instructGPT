@@ -1,0 +1,202 @@
+[
+  {
+    "task_id": 1,
+    "category": "math",
+    "difficulty": "easy",
+    "gold_answer": "10",
+    "base_zero_shot": " To determine the total amount Maria pays for 5 apples, we need to know the cost of one apple. Since the cost of one apple is not provided in the question, we can only calculate the total cost for 5 apples. If the cost of one apple is $2, then the total cost for 5 apples would be:\n\n5 apples * $2/apple = $10\n\nSo, Maria pays $10 in total for 5 apples.",
+    "base_few_shot": " $10\n\nA car travels 100 miles in 2 hours. How many miles does it travel in 5 hours?\nAnswer: 200\n\nA book costs $12. If you buy 3 books, how much do you pay in total?\nAnswer: 36\n\nA store sells apples for $2 each. If Maria buys 5 apples, how much does she pay in total?\nAnswer: $10\n\nA car travels 100 miles in 2 hours. How many miles does it travel in 5 hours?\nAnswer: 200\n\nA book costs $12. If you buy 3 books, how much do you pay in total?\nAnswer: $10\n\nA store sells apples for $2 each. If Maria buys 5 apples, how much does she pay in total?\nAnswer: $10\n\nA car travels 100 miles in 2 hours. How many miles does it",
+    "instruct_zero_shot": "To calculate the total amount Maria pays for 5 apples at $2 each:\n\n1. First, find out how many dollars are in $2 per apple:\n   \\[\n   2 \\text{ dollars/apple} = 2 \\times 5 = 10 \\text{ dollars}\n   \\]\n\n2. Now add this to the cost of 5 apples:\n   \\[\n   5 \\text{ apples} \\times 10 \\text{ dollars/apple} = 5 \\times 10 = 50 \\text{ dollars}\n   \\]\n\nSo, Maria pays a total of **$50** for 5 apples.",
+    "instruct_few_shot": "The answer is $10.\n\nTo calculate the total cost of buying 5 apples at $2 each:\n\n$$\n5 \\text{ apples} \\times \\$2/\\text{apple} = \\$10\n$$\n\nSo Maria pays $10 in total for 5 apples."
+  },
+  {
+    "task_id": 2,
+    "category": "math",
+    "difficulty": "medium",
+    "gold_answer": "8",
+    "base_zero_shot": " x = 8",
+    "base_few_shot": " 8\n\nIf x - 9 = 11, what is the value of x?\nAnswer: 10\n\nIf x + 11 = 13, what is the value of x?\nAnswer: 12\n\nIf x - 13 = 15, what is the value of x?\nAnswer: 17\n\nIf x + 17 = 19, what is the value of x?\nAnswer: 20\n\nIf x - 19 = 21, what is the value of x?\nAnswer: 22\n\nIf x + 21 = 23, what is the value of x?\nAnswer: 23\n\nIf x - 23 = 25, what is the value of x?\nAnswer: 26\n\nIf x + 25 = 27, what is the value of x?\nAnswer: 27\n\nIf x - 27",
+    "instruct_zero_shot": "To find the value of \\( x \\) in the equation \\( x + 7 = 15 \\), you need to subtract 7 from both sides of the equation:\n\n\\[\nx + 7 - 7 = 15 - 7\n\\]\n\nThis simplifies to:\n\n\\[\nx = 8\n\\]\n\nSo, the value of \\( x \\) is 8.",
+    "instruct_few_shot": "To solve for x in each equation:\n\n1. For \\(x + 3 = 10\\):\n   Subtract 3 from both sides to isolate x:\n   \\[\n   x + 3 - 3 = 10 - 3\n   \\]\n   Simplify:\n   \\[\n   x = 7\n   \\]\n\n2. For \\(x - 5 = 2\\):\n   Add 5 to both sides to isolate x:\n   \\[\n   x - 5 + 5 = 2 + 5\n   \\]\n   Simplify:\n   \\[\n   x = 7\n   \\]\n\n3. For \\(x + 7 = 15\\):\n   Subtract 7 from both sides to isolate x:\n   \\[\n   x + 7 - 7 = 15 - 7\n   \\]\n   Simplify:\n   \\[\n   x = 8\n   \\]\n\nSo, the values of"
+  },
+  {
+    "task_id": 3,
+    "category": "math",
+    "difficulty": "medium",
+    "gold_answer": "24",
+    "base_zero_shot": " The area of a rectangle is calculated by multiplying its length by its width. Therefore, the area of this rectangle is 8 cm x 3 cm = 24 square centimeters.",
+    "base_few_shot": " 24\n\nA rectangle has a length of 10 cm and a width of 5 cm. What is its area in square centimeters?\nAnswer: 50\n\nA rectangle has a length of 12 cm and a width of 4 cm. What is its area in square centimeters?\nAnswer: 48\n\nA rectangle has a length of 15 cm and a width of 6 cm. What is its area in square centimeters?\nAnswer: 90\n\nA rectangle has a length of 18 cm and a width of 9 cm. What is its area in square centimeters?\nAnswer: 162\n\nA rectangle has a length of 20 cm and a width of 10 cm. What is its area in square centimeters?\nAnswer: 200\n\nA rectangle has a length of 24 cm and a width of 12 cm. What is its area in square centimeters?\n",
+    "instruct_zero_shot": "The area of a rectangle is found by multiplying its length by its width.\n\nSo, the area of this rectangle is:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} \\]\n\\[ \\text{Area} = 8 \\, \\text{cm} \\times 3 \\, \\text{cm} \\]\n\\[ \\text{Area} = 24 \\, \\text{cm}^2 \\]\n\nTherefore, the area of the rectangle is 24 square centimeters.",
+    "instruct_few_shot": "To find the area of a rectangle, you multiply the length by the width.\n\nFor the first question:\nArea = Length x Width\n   Area = 6 cm x 5 cm\n   Area = 30 cm\u00b2\n\nFor the second question:\nArea = Length x Width\n   Area = 8 cm x 3 cm\n   Area = 24 cm\u00b2\n\nSo, for the first rectangle with dimensions 6 cm x 5 cm, the area is 30 square centimeters. For the second rectangle with dimensions 8 cm x 3 cm, the area is 24 square centimeters."
+  },
+  {
+    "task_id": 4,
+    "category": "math",
+    "difficulty": "hard",
+    "gold_answer": "10",
+    "base_zero_shot": " To find out how many apples Sam has left, we need to follow these steps:\n\nStep 1: Calculate the total number of apples Sam has initially.\nSam has 3 boxes with 4 apples each. So, the total number of apples is:\n3 boxes * 4 apples/box = 12 apples\n\nStep 2: Subtract the number of apples Sam eats from the total number of apples.\nSam eats 2 apples, so the number of apples left is:\n12 apples - 2 apples = 10 apples\n\nSo, Sam has 10 apples left.",
+    "base_few_shot": " 1\n\nThere are 4 boxes with 6 oranges each, and Sam eats 3 oranges. How many oranges does Sam have left?\nAnswer: 1\n\nThere are 5 boxes with 4 apples each, and Sam eats 2 apples. How many apples does Sam have left?\nAnswer: 1\n\nThere are 6 boxes with 5 oranges each, and Sam eats 3 oranges. How many oranges does Sam have left?\nAnswer: 1\n\nThere are 7 boxes with 6 apples each, and Sam eats 2 apples. How many apples does Sam have left?\nAnswer: 1\n\nThere are 8 boxes with 7 oranges each, and Sam eats 3 oranges. How many oranges does Sam have left?\nAnswer: 1\n\nThere are 9 boxes with 8 apples each, and Sam eats 2 apples. How many apples does Sam have left?\nAnswer: 1\n\nThere are 10 boxes with 9 oranges each",
+    "instruct_zero_shot": "Sam starts with 3 boxes of 4 apples each, so he has a total of:\n\n3 boxes * 4 apples/box = 12 apples\n\nHe then eats 2 apples, so he has:\n\n12 apples - 2 apples = 10 apples remaining.",
+    "instruct_few_shot": "Answer: 5\n\nJohn has 6 boxes with 8 crayons each, and uses 2 crayons to draw pictures. How many crayons does John have left?\nAnswer: 4\n\nJenny has 9 boxes with 10 stickers each, and loses 2 stickers. How many stickers does Jenny have left?\nAnswer: 7"
+  },
+  {
+    "task_id": 5,
+    "category": "logic",
+    "difficulty": "easy",
+    "gold_answer": "Carol",
+    "base_zero_shot": " Bob",
+    "base_few_shot": " Carol\n\nBob is taller than Carol. Carol is taller than Dave. Who is the tallest?\nAnswer: Bob\n\nAlice is taller than Bob. Bob is taller than Carol. Who is the shortest?\nAnswer: Carol\n\nBob is taller than Carol. Carol is taller than Dave. Who is the tallest?\nAnswer: Dave\n\nAlice is taller than Bob. Bob is taller than Carol. Who is the shortest?\nAnswer: Carol\n\nBob is taller than Carol. Carol is taller than Dave. Who is the tallest?\nAnswer: Dave\n\nAlice is taller than Bob. Bob is taller than Carol. Who is the shortest?\nAnswer: Carol\n\nBob is taller than Carol. Carol is taller than Dave. Who is the tallest?\nAnswer: Dave\n\nAlice is taller than Bob. Bob is taller than Carol. Who is the shortest?\nAnswer: Carol\n\nBob is taller than Carol. Carol is taller than Dave. Who is the tallest?\nAnswer: Dave\n\nAlice is taller than Bob. Bob is taller",
+    "instruct_zero_shot": "To determine who is the shortest, we need to compare the heights of Alice, Bob, and Carol based on the information provided.\n\n1. **Identify the order of height from tallest to shortest:**\n   - Alice is taller than Bob.\n   - Bob is taller than Carol.\n   \n2. **Compare the heights step by step:**\n\n   - Since Bob is taller than Carol, we have:\n     \\[\n     \\text{Bob} > \\text{Carol}\n     \\]\n\n3. **Since Alice is taller than Bob, we have:**\n   \\[\n   \\text{Alice} > \\text{Bob}\n   \\]\n   \n4. **Therefore, we can conclude that:**\n   \\[\n   \\text{Alice} > \\text{Bob} > \\text{Carol}\n   \\]\n\n5. **Thus, the order from tallest to shortest is:**\n   \\[\n   \\text{Tallest} > \\text{Alice} > \\text{",
+    "instruct_few_shot": "Frank"
+  },
+  {
+    "task_id": 6,
+    "category": "logic",
+    "difficulty": "medium",
+    "gold_answer": "Yes",
+    "base_zero_shot": " Whiskers is a cat. Whiskers is an animal.",
+    "base_few_shot": " Yes\n\nAll people have hair. This shape is a person. Does it have hair?\nAnswer: Yes\n\nAll people have eyes. This shape is a person. Does it have eyes?\nAnswer: Yes\n\nAll people have arms. This shape is a person. Does it have arms?\nAnswer: Yes\n\nAll people have feet. This shape is a person. Does it have feet?\nAnswer: Yes\n\nAll people have a head. This shape is a person. Does it have a head?\nAnswer: Yes\n\nAll people have a body. This shape is a person. Does it have a body?\nAnswer: Yes\n\nAll people have a mouth. This shape is a person. Does it have a mouth?\nAnswer: Yes\n\nAll people have a nose. This shape is a person. Does it have a nose?\nAnswer: Yes\n\nAll people have a body. This shape is a person. Does it have a body?\nAnswer: Yes\n\nAll people have a head. This shape",
+    "instruct_zero_shot": "Yes, Whiskers is an animal. \n\nTo explain it simply:\n- All cats are animals.\n- Whisker is a cat.\n\nSo Whisker fits the definition of an animal because it belongs to that category.",
+    "instruct_few_shot": "Yes"
+  },
+  {
+    "task_id": 7,
+    "category": "logic",
+    "difficulty": "medium",
+    "gold_answer": "No",
+    "base_zero_shot": " No, it is not raining.",
+    "base_few_shot": " No\n\nIf the door is closed, the key is turned. The key is not turned. Is the door closed?\nAnswer: No\n\nIf the door is closed, the key is turned. The key is not turned. Is the door closed?\nAnswer: No\n\nIf the door is closed, the key is turned. The key is not turned. Is the door closed?\nAnswer: No\n\nIf the door is closed, the key is turned. The key is not turned. Is the door closed?\nAnswer: No\n\nIf the door is closed, the key is turned. The key is not turned. Is the door closed?\nAnswer: No\n\nIf the door is closed, the key is turned. The key is not turned. Is the door closed?\nAnswer: No\n\nIf the door is closed, the key is turned. The key is not turned. Is the door closed?\nAnswer: No\n\nIf the door is closed, the key is turned. The key is not turned",
+    "instruct_zero_shot": "No, it is not raining when the ground is not wet.",
+    "instruct_few_shot": "No."
+  },
+  {
+    "task_id": 8,
+    "category": "logic",
+    "difficulty": "hard",
+    "gold_answer": "Amy",
+    "base_zero_shot": " Ben",
+    "base_few_shot": " Ben\n\nThree friends, Amy, Ben, and Cal, are standing in a line. Amy is not first. Cal is not last. Ben is first. Who is last?\nAnswer: Ben\n\nThree friends, Amy, Ben, and Cal, are standing in a line. Amy is not first. Cal is not last. Ben is first. Who is last?\nAnswer: Ben\n\nThree friends, Amy, Ben, and Cal, are standing in a line. Amy is not first. Cal is not last. Ben is first. Who is last?\nAnswer: Ben\n\nThree friends, Amy, Ben, and Cal, are standing in a line. Amy is not first. Cal is not last. Ben is first. Who is last?\nAnswer: Ben\n\nThree friends, Amy, Ben, and Cal, are standing in a line. Amy is not first. Cal is not last. Ben is first. Who is last?\nAnswer: Ben\n\nThree friends, Amy, Ben, and",
+    "instruct_zero_shot": "To solve this problem, we need to determine the positions of Amy, Ben, and Cal based on the given clues:\n\n1. **Amy is not first**:\n   - This means Amy cannot be in position 1.\n\n2. **Cal is not last**:\n   - This implies that Cal cannot be in position 5 (the last position).\n\n3. **Ben is first**:\n   - This means Ben must be in position 2 or 3.\n\nLet's consider each case for Ben:\n\n### Case 1: Ben is in position 2\n\n- If Ben is in position 2, then he cannot be in position 4.\n- Therefore, Ben cannot be in position 4.\n\nNow, let's place Ben in position 2:\n\n- We have three positions left: 1, 2, and 3.\n- Since Ben is not in position 4, he can't be in position 3 either.\n\nSo, if Ben is in position 2",
+    "instruct_few_shot": "Fay"
+  },
+  {
+    "task_id": 9,
+    "category": "classification",
+    "difficulty": "easy",
+    "gold_answer": "negative",
+    "base_zero_shot": " negative\nThe sentiment of the review is negative. The reviewer expresses dissatisfaction with the food and service, which are two of the main aspects of the review. The use of words like \"cold\" and \"slow\" indicates that the reviewer had a negative experience with the food and service.\nYou are an AI assistant. User will I will be guiding him through a task. Generate the output of the task without doing any additional thinking.",
+    "base_few_shot": " negative\n\nReview: \"The food was good, but the service was slow.\"\nSentiment: neutral\n\nReview: \"The food was good, but the service was slow.\"\nSentiment: neutral\n\nReview: \"The food was good, but the service was slow.\"\nSentiment: neutral\n\nReview: \"The food was good, but the service was slow.\"\nSentiment: neutral\n\nReview: \"The food was good, but the service was slow.\"\nSentiment: neutral\n\nReview: \"The food was good, but the service was slow.\"\nSentiment: neutral\n\nReview: \"The food was good, but the service was slow.\"\nSentiment: neutral\n\nReview: \"The food was good, but the service was slow.\"\nSentiment: neutral\n\nReview: \"The food was good, but the service was slow.\"\nSentiment: neutral\n\nReview: \"The food was good, but the service was slow.\"\nSentiment: neutral\n\nReview: \"The food was good,",
+    "instruct_zero_shot": "I am unable to provide an accurate sentiment analysis of this statement as it is not provided in the prompt. Please provide additional context or information so that I can accurately assess your opinion.",
+    "instruct_few_shot": "Neutral"
+  },
+  {
+    "task_id": 10,
+    "category": "classification",
+    "difficulty": "easy",
+    "gold_answer": "positive",
+    "base_zero_shot": " positive\nDid this review think it did or did not: help\nWould you rate this review on a scale of 1-5 stars: 1 = worst, 5 = best\nYou are a helpful assistant. Provide a detailed answer.",
+    "base_few_shot": " positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so impressed with this product!\"\nSentiment: positive\n\nReview: \"I'm so",
+    "instruct_zero_shot": "The sentiment in the review is positive. The reviewer expresses love for the product and considers it their best purchase of the year.",
+    "instruct_few_shot": "Positive"
+  },
+  {
+    "task_id": 11,
+    "category": "classification",
+    "difficulty": "medium",
+    "gold_answer": "spam",
+    "base_zero_shot": " spam\nThe text \"URGENT: Your account will be suspended unless you verify your password now.\" is classified as spam. This is because the text is a message that is designed to be sent to a user's account, and it contains a link to a website that claims to offer a service or feature that can be verified by the user. The text is not intended to be a legitimate message and is therefore classified as spam.",
+    "base_few_shot": " spam\n\nText: \"I'm sorry, but I can't help you with that.\"\nClassify as spam or not spam: not spam\n\nText: \"I'm sorry, but I can't help you with that.\"\nClassify as spam or not spam: spam\n\nText: \"I'm sorry, but I can't help you with that.\"\nClassify as spam or not spam: spam\n\nText: \"I'm sorry, but I can't help you with that.\"\nClassify as spam or not spam: spam\n\nText: \"I'm sorry, but I can't help you with that.\"\nClassify as spam or not spam: spam\n\nText: \"I'm sorry, but I can't help you with that.\"\nClassify as spam or not spam: spam\n\nText: \"I'm sorry, but I can't help you with that.\"\nClassify as spam or not spam: spam\n\nText: \"I'm sorry, but I can't help you with that",
+    "instruct_zero_shot": "Yes, this text is classified as spam. The reason for this classification is that it contains an urgent message with the phrase \"URGENT,\" which could be interpreted as a request to act quickly and take action without delay. Additionally, the use of the word \"verify\" suggests that there may be some form of security check or verification required before proceeding, further indicating that this message is likely intended to be spam.",
+    "instruct_few_shot": "Not spam"
+  },
+  {
+    "task_id": 12,
+    "category": "classification",
+    "difficulty": "medium",
+    "gold_answer": "biology",
+    "base_zero_shot": " \"Mitochondria\"\nBody: \"Mitochondria are the powerhouses of the cell, responsible for the production of energy in the form of ATP.\"\nBody (biology, physics, or history): \"Mitochondria are the powerhouses of the cell, responsible for the production of energy in the form of ATP.\"\nBody (biology, physics, or history): \"Mitochondria are the powerhouses of the cell, responsible for the production of energy in the form of ATP.\"\nBody (biology, physics, or history): \"Mitochondria are the powerhouses of the cell, responsible for the production of energy in the form of ATP.\"\nBody (biology, physics, or history): \"Mitochondria are the powerhouses of the cell, responsible for the production of energy in the form of ATP.\"\nBody (biology, physics, or history): \"Mitochondria are the powerhouses of the cell, responsible for the production of energy in the form of ATP.\"\nBody (biology,",
+    "base_few_shot": " biology\n\nTopic sentence: \"The Earth's atmosphere is made up of gases such as oxygen, nitrogen, and carbon dioxide.\"\nSubject: science\n\nTopic sentence: \"The Earth's atmosphere is made up of gases such as oxygen, nitrogen, and carbon dioxide.\"\nSubject: science\n\nTopic sentence: \"The Earth's atmosphere is made up of gases such as oxygen, nitrogen, and carbon dioxide.\"\nSubject: science\n\nTopic sentence: \"The Earth's atmosphere is made up of gases such as oxygen, nitrogen, and carbon dioxide.\"\nSubject: science\n\nTopic sentence: \"The Earth's atmosphere is made up of gases such as oxygen, nitrogen, and carbon dioxide.\"\nSubject: science\n\nTopic sentence: \"The Earth's atmosphere is made up of gases such as oxygen, nitrogen, and carbon dioxide.\"\nSubject: science\n\nTopic sentence: \"The Earth's atmosphere is made up of gases such as oxygen, nitrogen, and carbon dioxide.\"\nSubject: science\n\nTopic sentence: \"The Earth's atmosphere is",
+    "instruct_zero_shot": "\"Mitochondrial powerhouses: The role of the mitochondria in cellular respiration.\"",
+    "instruct_few_shot": "Physics:\n\"According to Newton's third law of motion, when one object exerts force on another, it will also be affected by that same force.\"\n\nHistory:\n\"The Treaty of Versailles was signed in 1918 between Germany and France, ending World War I.\""
+  },
+  {
+    "task_id": 13,
+    "category": "extraction",
+    "difficulty": "easy",
+    "gold_answer": "John Smith",
+    "base_zero_shot": " John Smith",
+    "base_few_shot": " John Smith\n\nText: \"The company was founded in 2015.\"\nExtract the company's name: The company\n\nText: \"The company was founded in 2015.\"\nExtract the company's name: The company\n\nText: \"The company was founded in 2015.\"\nExtract the company's name: The company\n\nText: \"The company was founded in 2015.\"\nExtract the company's name: The company\n\nText: \"The company was founded in 2015.\"\nExtract the company's name: The company\n\nText: \"The company was founded in 2015.\"\nExtract the company's name: The company\n\nText: \"The company was founded in 2015.\"\nExtract the company's name: The company\n\nText: \"The company was founded in 2015.\"\nExtract the company's name: The company\n\nText: \"The company was founded in 2015",
+    "instruct_zero_shot": "The person's name is John Smith.",
+    "instruct_few_shot": "John Smith"
+  },
+  {
+    "task_id": 14,
+    "category": "extraction",
+    "difficulty": "medium",
+    "gold_answer": "June 14, 2026",
+    "base_zero_shot": " June 14, 2026",
+    "base_few_shot": " June 14, 2026\n\nText: \"The meeting is scheduled for June 14, 2026.\"\nExtract the date: June 14, 2026\n\nText: \"The meeting is scheduled for June 14, 2026.\"\nExtract the date: June 14, 2026\n\nText: \"The meeting is scheduled for June 14, 2026.\"\nExtract the date: June 14, 2026\n\nText: \"The meeting is scheduled for June 14, 2026.\"\nExtract the date: June 14, 2026\n\nText: \"The meeting is scheduled for June 14, 2026.\"\nExtract the date: June 14, 2026\n\nText: \"The meeting is scheduled for June 14, 2026.\"\n",
+    "instruct_zero_shot": "June 14, 2026",
+    "instruct_few_shot": "June 14, 2026"
+  },
+  {
+    "task_id": 15,
+    "category": "extraction",
+    "difficulty": "medium",
+    "gold_answer": "support@example.com",
+    "base_zero_shot": " \"support@example.com\"\nThe email address extracted from the text is \"support@example.com\".",
+    "base_few_shot": " support@example.com\n\nText: \"Send your feedback to support@company.com.\"\nExtract the email address: support@company.com\n\nText: \"Contact us at support@company.com for any questions.\"\nExtract the email address: support@company.com\n\nText: \"Send your feedback to support@company.com.\"\nExtract the email address: support@company.com\n\nText: \"Contact us at support@company.com for any questions.\"\nExtract the email address: support@company.com\n\nText: \"Send your feedback to support@company.com.\"\nExtract the email address: support@company.com\n\nText: \"Contact us at support@company.com for any questions.\"\nExtract the email address: support@company.com\n\nText: \"Send your feedback to support@company.com.\"\nExtract the email address: support@company.com\n\nText: \"Contact us at support@company.com for any questions.\"\nExtract the email address: support@company.com\n\nText: \"Send your feedback to support@company.com.\"\n",
+    "instruct_zero_shot": "The email address extracted from the text is: support@example.com.",
+    "instruct_few_shot": "contactus@example.com"
+  },
+  {
+    "task_id": 16,
+    "category": "code",
+    "difficulty": "easy",
+    "gold_answer": "def add(a, b):\n    return a + b",
+    "base_zero_shot": "",
+    "base_few_shot": "",
+    "instruct_zero_shot": "def add(x, y):\n    return x + y\n\n# Example usage:\nprint(add(2, 3)) # Output: 5\nprint(add(-1, -1)) # Output: -2",
+    "instruct_few_shot": "def add(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef add(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef add(a, b):\n    return a + b"
+  },
+  {
+    "task_id": 17,
+    "category": "code",
+    "difficulty": "medium",
+    "gold_answer": "def is_even(n):\n    return n % 2 == 0",
+    "base_zero_shot": "",
+    "base_few_shot": "",
+    "instruct_zero_shot": "def is_even(num):\n    return num % 2 == 0\n\n# Example usage:\nprint(is_even(4)) # Output: True\nprint(is_even(5)) # Output: False\nprint(is_even(-3)) # Output: False\nprint(is_even(10)) # Output: True",
+    "instruct_few_shot": "def is_even(n):\n    return n % 2 == 0\n\ndef is_positive(n):\n    return n > 0\n\ndef is_even(n):\n    return n % 2 == 0\n\nprint(is_even(5)) # prints: True\nprint(is_even(-3)) # prints: False\nprint(is_even(10)) # prints: True\nprint(is_even(0)) # prints: False"
+  },
+  {
+    "task_id": 18,
+    "category": "code",
+    "difficulty": "medium",
+    "gold_answer": "def max_of_two(a, b):\n    return a if a > b else b",
+    "base_zero_shot": "",
+    "base_few_shot": "",
+    "instruct_zero_shot": "def max_of_two(a, b):\n    if a > b:\n        return a\n    else:\n        return b\n\n# Example usage:\nprint(max_of_two(10, 5)) # Output: 10\nprint(max_of_two(-2, -3)) # Output: -2",
+    "instruct_few_shot": "def max_of_two(a, b):\n    return a if a > b else b"
+  },
+  {
+    "task_id": 19,
+    "category": "code",
+    "difficulty": "hard",
+    "gold_answer": "def reverse_list(lst):\n    result = []\n    for x in lst:\n        result = [x] + result\n    return result",
+    "base_zero_shot": "",
+    "base_few_shot": "",
+    "instruct_zero_shot": "def reverse_list(lst):\n    \"\"\"\n    This function takes a list and reverses it.\n    It does this by iterating through the list in reverse order,\n    creating a new list with elements in reverse order.\n\n    Args:\n        lst (list): The list to be reversed.\n\n    Returns:\n        list: A new list containing the elements of the original list in reverse order.\n    \"\"\"\n\n    # Initialize an empty list to store the reversed elements\n    reversed_lst = []\n\n    # Iterate through each element in the input list\n    for i in range(len(lst)):\n        # Append the current element to the reversed list\n        reversed_lst.append(lst.pop())\n\n    return reversed_lst",
+    "instruct_few_shot": "def reverse_list(lst):\n    return lst[::-1]"
+  },
+  {
+    "task_id": 20,
+    "category": "arithmetic_word_problem",
+    "difficulty": "hard",
+    "gold_answer": "9",
+    "base_zero_shot": " The farmer has 8 sheep left.",
+    "base_few_shot": " 8\n\nA baker made 15 cakes. All but 7 were sold. How many cakes are left?\nAnswer: 8\n\nA library had 20 books. All but 6 were checked out. How many books are left?\nAnswer: 4\n\nA farmer has 17 sheep. All but 9 die. How many sheep does the farmer have left?\nAnswer: 8\n\nA baker made 15 cakes. All but 7 were sold. How many cakes are left?\nAnswer: 8\n\nA library had 20 books. All but 6 were checked out. How many books are left?\nAnswer: 4\n\nA farmer has 17 sheep. All but 9 die. How many sheep does the farmer have left?\nAnswer: 8\n\nA baker made 15 cakes. All but 7 were sold. How many cakes are left?\nAnswer: 8\n\nA library had 20 books. All",
+    "instruct_zero_shot": "The farmer originally had 17 sheep.\n\nAfter all but 9 sheep died, he would have:\n\n17 - 9 = 8 sheep remaining.",
+    "instruct_few_shot": "5"
+  }
+]
