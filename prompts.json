@@ -1,0 +1,167 @@
+{
+  "version": "1.0",
+  "created": "2026-07-31",
+  "note": "Frozen set. Do not edit existing entries — append new ones with new ids for later experiments instead.",
+  "prompts": [
+    {
+      "id": 1,
+      "category": "math",
+      "difficulty": "easy",
+      "prompt": "A store sells apples for $2 each. If Maria buys 5 apples, how much does she pay in total?\nAnswer:",
+      "few_shot_prefix": "A train travels 60 miles in 2 hours. What is its speed in miles per hour?\nAnswer: 30\n\nA book costs $12. If you buy 3 books, how much do you pay?\nAnswer: 36\n\n",
+      "gold_answer": "10"
+    },
+    {
+      "id": 2,
+      "category": "math",
+      "difficulty": "medium",
+      "prompt": "If x + 7 = 15, what is the value of x?\nAnswer:",
+      "few_shot_prefix": "If x + 3 = 10, what is the value of x?\nAnswer: 7\n\nIf x - 5 = 2, what is the value of x?\nAnswer: 7\n\n",
+      "gold_answer": "8"
+    },
+    {
+      "id": 3,
+      "category": "math",
+      "difficulty": "medium",
+      "prompt": "A rectangle has a length of 8 cm and a width of 3 cm. What is its area in square centimeters?\nAnswer:",
+      "few_shot_prefix": "A rectangle has a length of 4 cm and a width of 2 cm. What is its area?\nAnswer: 8\n\nA rectangle has a length of 6 cm and a width of 5 cm. What is its area?\nAnswer: 30\n\n",
+      "gold_answer": "24"
+    },
+    {
+      "id": 4,
+      "category": "math",
+      "difficulty": "hard",
+      "prompt": "Sam has 3 boxes with 4 apples each, and eats 2 apples. How many apples does Sam have left?\nAnswer:",
+      "few_shot_prefix": "Jane has 2 boxes with 5 pencils each, and gives away 3 pencils. How many pencils does Jane have left?\nAnswer: 7\n\nTom has 4 boxes with 2 pens each, and loses 1 pen. How many pens does Tom have left?\nAnswer: 7\n\n",
+      "gold_answer": "10"
+    },
+    {
+      "id": 5,
+      "category": "logic",
+      "difficulty": "easy",
+      "prompt": "Alice is taller than Bob. Bob is taller than Carol. Who is the shortest?\nAnswer:",
+      "few_shot_prefix": "Dan is older than Eve. Eve is older than Frank. Who is the youngest?\nAnswer: Frank\n\nGina runs faster than Hal. Hal runs faster than Ivy. Who is the slowest?\nAnswer: Ivy\n\n",
+      "gold_answer": "Carol"
+    },
+    {
+      "id": 6,
+      "category": "logic",
+      "difficulty": "medium",
+      "prompt": "All cats are animals. Whiskers is a cat. Is Whiskers an animal?\nAnswer:",
+      "few_shot_prefix": "All birds can fly. Tweety is a bird. Can Tweety fly?\nAnswer: Yes\n\nAll squares have four sides. This shape is a square. Does it have four sides?\nAnswer: Yes\n\n",
+      "gold_answer": "Yes"
+    },
+    {
+      "id": 7,
+      "category": "logic",
+      "difficulty": "medium",
+      "prompt": "If it is raining, the ground is wet. The ground is not wet. Is it raining?\nAnswer:",
+      "few_shot_prefix": "If the light is on, the switch is up. The switch is not up. Is the light on?\nAnswer: No\n\nIf the door is locked, the key is turned. The key is not turned. Is the door locked?\nAnswer: No\n\n",
+      "gold_answer": "No"
+    },
+    {
+      "id": 8,
+      "category": "logic",
+      "difficulty": "hard",
+      "prompt": "Three friends, Amy, Ben, and Cal, are standing in a line. Amy is not first. Cal is not last. Ben is first. Who is last?\nAnswer:",
+      "few_shot_prefix": "Three friends, Dee, Eli, and Fay, are standing in a line. Dee is not first. Fay is not last. Eli is first. Who is last?\nAnswer: Dee\n\n",
+      "gold_answer": "Amy"
+    },
+    {
+      "id": 9,
+      "category": "classification",
+      "difficulty": "easy",
+      "prompt": "Review: \"The food was cold and the service was slow.\"\nSentiment (positive, neutral, or negative):",
+      "few_shot_prefix": "Review: \"Amazing experience, would come back again!\"\nSentiment: positive\n\nReview: \"It was okay, nothing special.\"\nSentiment: neutral\n\n",
+      "gold_answer": "negative"
+    },
+    {
+      "id": 10,
+      "category": "classification",
+      "difficulty": "easy",
+      "prompt": "Review: \"Absolutely loved it, best purchase this year.\"\nSentiment (positive, neutral, or negative):",
+      "few_shot_prefix": "Review: \"Terrible, broke after one day.\"\nSentiment: negative\n\nReview: \"It works fine, does the job.\"\nSentiment: neutral\n\n",
+      "gold_answer": "positive"
+    },
+    {
+      "id": 11,
+      "category": "classification",
+      "difficulty": "medium",
+      "prompt": "Text: \"URGENT: Your account will be suspended unless you verify your password now.\"\nClassify as spam or not spam:",
+      "few_shot_prefix": "Text: \"Hey, are we still on for lunch tomorrow?\"\nClassify: not spam\n\nText: \"Congratulations! You've won a free iPhone, click here now!\"\nClassify: spam\n\n",
+      "gold_answer": "spam"
+    },
+    {
+      "id": 12,
+      "category": "classification",
+      "difficulty": "medium",
+      "prompt": "Topic sentence: \"The mitochondria is the powerhouse of the cell.\"\nSubject (biology, physics, or history):",
+      "few_shot_prefix": "Topic sentence: \"Newton's third law states every action has an equal and opposite reaction.\"\nSubject: physics\n\nTopic sentence: \"The Treaty of Versailles ended World War One.\"\nSubject: history\n\n",
+      "gold_answer": "biology"
+    },
+    {
+      "id": 13,
+      "category": "extraction",
+      "difficulty": "easy",
+      "prompt": "Text: \"John Smith was born on March 5, 1990 in Chicago.\"\nExtract the person's name:",
+      "few_shot_prefix": "Text: \"Maria Lopez moved to Boston in 2015.\"\nExtract the person's name: Maria Lopez\n\nText: \"David Chen graduated in 2020.\"\nExtract the person's name: David Chen\n\n",
+      "gold_answer": "John Smith"
+    },
+    {
+      "id": 14,
+      "category": "extraction",
+      "difficulty": "medium",
+      "prompt": "Text: \"The meeting is scheduled for June 14, 2026 at 3pm.\"\nExtract the date:",
+      "few_shot_prefix": "Text: \"The invoice was issued on January 2, 2024.\"\nExtract the date: January 2, 2024\n\nText: \"The event took place on May 9, 2022.\"\nExtract the date: May 9, 2022\n\n",
+      "gold_answer": "June 14, 2026"
+    },
+    {
+      "id": 15,
+      "category": "extraction",
+      "difficulty": "medium",
+      "prompt": "Text: \"Contact us at support@example.com for help.\"\nExtract the email address:",
+      "few_shot_prefix": "Text: \"Reach out to sales@company.org with questions.\"\nExtract the email address: sales@company.org\n\nText: \"Send feedback to hello@site.net anytime.\"\nExtract the email address: hello@site.net\n\n",
+      "gold_answer": "support@example.com"
+    },
+    {
+      "id": 16,
+      "category": "code",
+      "difficulty": "easy",
+      "prompt": "Write a Python function called `add` that takes two numbers and returns their sum.\nCode:",
+      "few_shot_prefix": "Write a Python function called `subtract` that takes two numbers and returns their difference.\nCode:\ndef subtract(a, b):\n    return a - b\n\n",
+      "gold_answer": "def add(a, b):\n    return a + b"
+    },
+    {
+      "id": 17,
+      "category": "code",
+      "difficulty": "medium",
+      "prompt": "Write a Python function called `is_even` that takes a number and returns True if it is even.\nCode:",
+      "few_shot_prefix": "Write a Python function called `is_positive` that takes a number and returns True if it is positive.\nCode:\ndef is_positive(n):\n    return n > 0\n\n",
+      "gold_answer": "def is_even(n):\n    return n % 2 == 0"
+    },
+    {
+      "id": 18,
+      "category": "code",
+      "difficulty": "medium",
+      "prompt": "Write a Python function called `max_of_two` that returns the larger of two numbers.\nCode:",
+      "few_shot_prefix": "Write a Python function called `min_of_two` that returns the smaller of two numbers.\nCode:\ndef min_of_two(a, b):\n    return a if a < b else b\n\n",
+      "gold_answer": "def max_of_two(a, b):\n    return a if a > b else b"
+    },
+    {
+      "id": 19,
+      "category": "code",
+      "difficulty": "hard",
+      "prompt": "Write a Python function called `reverse_list` that takes a list and returns it reversed, without using the built-in reverse() or [::-1].\nCode:",
+      "few_shot_prefix": "Write a Python function called `sum_list` that takes a list and returns the sum of its elements, without using the built-in sum().\nCode:\ndef sum_list(lst):\n    total = 0\n    for x in lst:\n        total += x\n    return total\n\n",
+      "gold_answer": "def reverse_list(lst):\n    result = []\n    for x in lst:\n        result = [x] + result\n    return result"
+    },
+    {
+      "id": 20,
+      "category": "arithmetic_word_problem",
+      "difficulty": "hard",
+      "prompt": "A farmer has 17 sheep. All but 9 die. How many sheep does the farmer have left?\nAnswer:",
+      "few_shot_prefix": "A baker made 12 cakes. All but 4 were sold. How many cakes are left?\nAnswer: 4\n\nA library had 20 books. All but 6 were checked out. How many books are left?\nAnswer: 6\n\n",
+      "gold_answer": "9"
+    }
+  ]
+}
