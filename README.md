@@ -33,3 +33,6 @@ Models: `Qwen/Qwen2.5-0.5B` (base) vs `Qwen/Qwen2.5-0.5B-Instruct`, on 20 frozen
    python few_shot_failure_audit.py --data-dir . --n-samples 5 --temperature 0.3
    ```
    To re-judge an existing audit JSON without a GPU: add `--reclassify`.
+
+
+   just a note: i do use ai to format these properly but most of the findings are through my experimentation. (just putting it out there to be completely candid to myself on this learning journey)
