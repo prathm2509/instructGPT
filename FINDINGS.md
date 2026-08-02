@@ -131,3 +131,70 @@ Drift falls but accuracy does not:
 Neither condition helps: deeper semantic interference or reasoning failure is
                           more likely.
 ```
+
+## Ablation results (executed 2026-08-03)
+
+The four-condition ablation ran on the Instruct model with greedy decoding on 10
+tasks (the four audited failures plus six held-out tasks). Outputs are in
+`few_shot_ablation.json`; automatic grades are in
+`few_shot_ablation_metrics.json`.
+
+### Accuracy
+
+```text
+A (original few-shot)                     4/10
+B (delimiters)                            6/10
+C (delimiters + instruction)              6/10
+D (instruction only)                      6/10
+```
+
+A is a grader undercount: task 2 answered the equation correctly but the
+first-number extraction rule hit a `1` inside the first paragraph, so treat the
+real A score as 5/10 (tasks 1, 2, 6, 13, 16). The honest picture is then:
+
+```text
+A (original)                              5/10
+B / C / D                                 6/10
+```
+
+No condition reached a ceiling; all four conditions failed on the same two
+tasks (task 4 arithmetic, and task 2 under the scoped rules), which signals a
+remaining difficulty floor.
+
+### What changed, task by task
+
+- Task 5 (relational logic, "shortest"): A wrong (`Frank`), B/C/D all correct
+  (`Carol`). Clean win for separating examples from the target.
+- Task 9 (sentiment): A wrong (`neutral`), B/C/D all correct (`negative`).
+- Task 15 (email extraction): A and B wrong (copied/blended), C and D correct.
+- Task 8 (line-order logic): B correct (`Amy`), A/C/D wrong. A alone does not
+  fully explain this; B helps, but the improvement is not robust to adding an
+  instruction.
+- Task 16 (code): A is the only pass. B/C/D drift into prose or keep generating
+  after the function, so code generation does not benefit from any of the new
+  formats.
+- Task 4 (arithmetic): stable failure across A/B/C/D; no format fixed it.
+
+### Conclusion
+
+The delimiters and instructions help selectively, not universally. The clearest
+win is on tasks where the target and examples share the same words: separating
+the sections fixed task 5 and task 9, and the explicit instruction fixed the
+email-extraction task 15. The added instruction was not necessary for those
+cases; the delimiters alone (B) already recovered task 5 and task 9.
+
+The new formats did not help everywhere. Task 8 regressed when the instruction
+was added on top of delimiters (C), and tasks 2, 4, and 16 still failed under
+B/C/D. The instruction's "do not copy" warning helped the email task but did not
+fix the deeper arithmetic and code-generation problems.
+
+So the ablation supports a narrow conclusion: the original few-shot failures
+are partly a prompt-structure problem, and the best fixes are either delimiters
+alone or delimiters plus an instruction, depending on the task. It does not
+support a general claim that explicit instructions fix few-shot prompting. The
+remaining failures on tasks 2, 4, and 16 are not fixed by any prompt variant
+tested here.
+
+A useful next step is to sample each condition (10 draws at temperature 0.3)
+before drawing conclusions, because the current run is one greedy draw per
+cell.

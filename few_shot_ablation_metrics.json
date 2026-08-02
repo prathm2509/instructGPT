@@ -1,0 +1,284 @@
+{
+  "summary": {
+    "A_original": {
+      "correct": 4,
+      "n": 10,
+      "accuracy": 0.4
+    },
+    "B_delimiters": {
+      "correct": 6,
+      "n": 10,
+      "accuracy": 0.6
+    },
+    "C_delimiters_and_instruction": {
+      "correct": 6,
+      "n": 10,
+      "accuracy": 0.6
+    },
+    "D_instruction_only": {
+      "correct": 6,
+      "n": 10,
+      "accuracy": 0.6
+    }
+  },
+  "cells": [
+    {
+      "task_id": 4,
+      "category": "math",
+      "gold": "10",
+      "A_original": {
+        "correct": false,
+        "extracted": 5.0,
+        "flags": []
+      },
+      "B_delimiters": {
+        "correct": false,
+        "extracted": 12.0,
+        "flags": []
+      },
+      "C_delimiters_and_instruction": {
+        "correct": false,
+        "extracted": 2.0,
+        "flags": []
+      },
+      "D_instruction_only": {
+        "correct": false,
+        "extracted": 5.0,
+        "flags": []
+      }
+    },
+    {
+      "task_id": 5,
+      "category": "logic",
+      "gold": "Carol",
+      "A_original": {
+        "correct": false,
+        "extracted": "Frank",
+        "flags": []
+      },
+      "B_delimiters": {
+        "correct": true,
+        "extracted": "Carol",
+        "flags": []
+      },
+      "C_delimiters_and_instruction": {
+        "correct": true,
+        "extracted": "Carol",
+        "flags": []
+      },
+      "D_instruction_only": {
+        "correct": true,
+        "extracted": "Carol",
+        "flags": []
+      }
+    },
+    {
+      "task_id": 8,
+      "category": "logic",
+      "gold": "Amy",
+      "A_original": {
+        "correct": false,
+        "extracted": "Fay",
+        "flags": []
+      },
+      "B_delimiters": {
+        "correct": true,
+        "extracted": "Amy",
+        "flags": []
+      },
+      "C_delimiters_and_instruction": {
+        "correct": false,
+        "extracted": "Ben",
+        "flags": []
+      },
+      "D_instruction_only": {
+        "correct": false,
+        "extracted": "Ben",
+        "flags": []
+      }
+    },
+    {
+      "task_id": 15,
+      "category": "extraction",
+      "gold": "support@example.com",
+      "A_original": {
+        "correct": false,
+        "extracted": "contactus@example.com",
+        "flags": []
+      },
+      "B_delimiters": {
+        "correct": false,
+        "extracted": "text: \"contact@example.com\"",
+        "flags": []
+      },
+      "C_delimiters_and_instruction": {
+        "correct": true,
+        "extracted": "contact us at support@example.com",
+        "flags": []
+      },
+      "D_instruction_only": {
+        "correct": true,
+        "extracted": "Support@example.com",
+        "flags": []
+      }
+    },
+    {
+      "task_id": 1,
+      "category": "math",
+      "gold": "10",
+      "A_original": {
+        "correct": true,
+        "extracted": 10.0,
+        "flags": []
+      },
+      "B_delimiters": {
+        "correct": true,
+        "extracted": 10.0,
+        "flags": []
+      },
+      "C_delimiters_and_instruction": {
+        "correct": true,
+        "extracted": 10.0,
+        "flags": []
+      },
+      "D_instruction_only": {
+        "correct": true,
+        "extracted": 10.0,
+        "flags": []
+      }
+    },
+    {
+      "task_id": 2,
+      "category": "math",
+      "gold": "8",
+      "A_original": {
+        "correct": false,
+        "extracted": 1.0,
+        "flags": [
+          "needs_review"
+        ]
+      },
+      "B_delimiters": {
+        "correct": false,
+        "extracted": 7.0,
+        "flags": []
+      },
+      "C_delimiters_and_instruction": {
+        "correct": false,
+        "extracted": 4.0,
+        "flags": []
+      },
+      "D_instruction_only": {
+        "correct": false,
+        "extracted": 4.0,
+        "flags": []
+      }
+    },
+    {
+      "task_id": 6,
+      "category": "logic",
+      "gold": "Yes",
+      "A_original": {
+        "correct": true,
+        "extracted": "yes",
+        "flags": []
+      },
+      "B_delimiters": {
+        "correct": true,
+        "extracted": "yes",
+        "flags": []
+      },
+      "C_delimiters_and_instruction": {
+        "correct": true,
+        "extracted": "yes",
+        "flags": []
+      },
+      "D_instruction_only": {
+        "correct": true,
+        "extracted": "yes",
+        "flags": []
+      }
+    },
+    {
+      "task_id": 9,
+      "category": "classification",
+      "gold": "negative",
+      "A_original": {
+        "correct": false,
+        "extracted": "neutral",
+        "flags": []
+      },
+      "B_delimiters": {
+        "correct": true,
+        "extracted": "negative",
+        "flags": []
+      },
+      "C_delimiters_and_instruction": {
+        "correct": true,
+        "extracted": "negative",
+        "flags": []
+      },
+      "D_instruction_only": {
+        "correct": true,
+        "extracted": "negative",
+        "flags": []
+      }
+    },
+    {
+      "task_id": 13,
+      "category": "extraction",
+      "gold": "John Smith",
+      "A_original": {
+        "correct": true,
+        "extracted": "John Smith",
+        "flags": []
+      },
+      "B_delimiters": {
+        "correct": true,
+        "extracted": "John Smith",
+        "flags": []
+      },
+      "C_delimiters_and_instruction": {
+        "correct": true,
+        "extracted": "John Smith",
+        "flags": []
+      },
+      "D_instruction_only": {
+        "correct": true,
+        "extracted": "John Smith",
+        "flags": []
+      }
+    },
+    {
+      "task_id": 16,
+      "category": "code",
+      "gold": "def add(a, b):\n    return a + b",
+      "A_original": {
+        "correct": true,
+        "extracted": "3/3 tests passed",
+        "flags": []
+      },
+      "B_delimiters": {
+        "correct": false,
+        "extracted": null,
+        "flags": [
+          "exec_error: SyntaxError"
+        ]
+      },
+      "C_delimiters_and_instruction": {
+        "correct": false,
+        "extracted": null,
+        "flags": [
+          "exec_error: NameError"
+        ]
+      },
+      "D_instruction_only": {
+        "correct": false,
+        "extracted": null,
+        "flags": [
+          "exec_error: SyntaxError"
+        ]
+      }
+    }
+  ]
+}

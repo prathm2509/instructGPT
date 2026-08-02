@@ -1,0 +1,471 @@
+{
+  "metadata": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "system_prompt": "You are a helpful assistant.",
+    "task_ids": [
+      4,
+      5,
+      8,
+      15,
+      1,
+      2,
+      6,
+      9,
+      13,
+      16
+    ],
+    "n_samples": 1,
+    "max_new_tokens": 200,
+    "do_sample": false,
+    "temperature": null,
+    "seed": 0,
+    "conditions": {
+      "A_original": "current few-shot prompt",
+      "B_delimiters": "examples and target marked, no extra instruction",
+      "C_delimiters_and_instruction": "delimiters plus explicit instruction",
+      "D_instruction_only": "explicit instruction without delimiters"
+    }
+  },
+  "tasks": [
+    {
+      "task_id": 4,
+      "category": "math",
+      "difficulty": "hard",
+      "gold_answer": "10",
+      "conditions": {
+        "A_original": {
+          "user_prompt": "Jane has 2 boxes with 5 pencils each, and gives away 3 pencils. How many pencils does Jane have left?\nAnswer: 7\n\nTom has 4 boxes with 2 pens each, and loses 1 pen. How many pens does Tom have left?\nAnswer: 7\n\nSam has 3 boxes with 4 apples each, and eats 2 apples. How many apples does Sam have left?\nAnswer:",
+          "samples": [
+            {
+              "seed": 0,
+              "output": "Answer: 5\n\nJohn has 6 boxes with 8 crayons each, and uses 2 crayons to draw pictures. How many crayons does John have left?\nAnswer: 4\n\nJenny has 9 boxes with 10 stickers each, and loses 2 stickers. How many stickers does Jenny have left?\nAnswer: 7"
+            }
+          ]
+        },
+        "B_delimiters": {
+          "user_prompt": "<EXAMPLES>\nJane has 2 boxes with 5 pencils each, and gives away 3 pencils. How many pencils does Jane have left?\nAnswer: 7\n\nTom has 4 boxes with 2 pens each, and loses 1 pen. How many pens does Tom have left?\nAnswer: 7\n</EXAMPLES>\n\n<TARGET>\nSam has 3 boxes with 4 apples each, and eats 2 apples. How many apples does Sam have left?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 1000,
+              "output": "Sam has 12 apples (3 x 4)."
+            }
+          ]
+        },
+        "C_delimiters_and_instruction": {
+          "user_prompt": "<EXAMPLES>\nJane has 2 boxes with 5 pencils each, and gives away 3 pencils. How many pencils does Jane have left?\nAnswer: 7\n\nTom has 4 boxes with 2 pens each, and loses 1 pen. How many pens does Tom have left?\nAnswer: 7\n</EXAMPLES>\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\n<TARGET>\nSam has 3 boxes with 4 apples each, and eats 2 apples. How many apples does Sam have left?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 2000,
+              "output": "2"
+            }
+          ]
+        },
+        "D_instruction_only": {
+          "user_prompt": "Jane has 2 boxes with 5 pencils each, and gives away 3 pencils. How many pencils does Jane have left?\nAnswer: 7\n\nTom has 4 boxes with 2 pens each, and loses 1 pen. How many pens does Tom have left?\nAnswer: 7\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\nSam has 3 boxes with 4 apples each, and eats 2 apples. How many apples does Sam have left?\nAnswer:",
+          "samples": [
+            {
+              "seed": 3000,
+              "output": "5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": 5,
+      "category": "logic",
+      "difficulty": "easy",
+      "gold_answer": "Carol",
+      "conditions": {
+        "A_original": {
+          "user_prompt": "Dan is older than Eve. Eve is older than Frank. Who is the youngest?\nAnswer: Frank\n\nGina runs faster than Hal. Hal runs faster than Ivy. Who is the slowest?\nAnswer: Ivy\n\nAlice is taller than Bob. Bob is taller than Carol. Who is the shortest?\nAnswer:",
+          "samples": [
+            {
+              "seed": 10000,
+              "output": "Frank"
+            }
+          ]
+        },
+        "B_delimiters": {
+          "user_prompt": "<EXAMPLES>\nDan is older than Eve. Eve is older than Frank. Who is the youngest?\nAnswer: Frank\n\nGina runs faster than Hal. Hal runs faster than Ivy. Who is the slowest?\nAnswer: Ivy\n</EXAMPLES>\n\n<TARGET>\nAlice is taller than Bob. Bob is taller than Carol. Who is the shortest?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 11000,
+              "output": "Carol"
+            }
+          ]
+        },
+        "C_delimiters_and_instruction": {
+          "user_prompt": "<EXAMPLES>\nDan is older than Eve. Eve is older than Frank. Who is the youngest?\nAnswer: Frank\n\nGina runs faster than Hal. Hal runs faster than Ivy. Who is the slowest?\nAnswer: Ivy\n</EXAMPLES>\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\n<TARGET>\nAlice is taller than Bob. Bob is taller than Carol. Who is the shortest?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 12000,
+              "output": "Carol"
+            }
+          ]
+        },
+        "D_instruction_only": {
+          "user_prompt": "Dan is older than Eve. Eve is older than Frank. Who is the youngest?\nAnswer: Frank\n\nGina runs faster than Hal. Hal runs faster than Ivy. Who is the slowest?\nAnswer: Ivy\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\nAlice is taller than Bob. Bob is taller than Carol. Who is the shortest?\nAnswer:",
+          "samples": [
+            {
+              "seed": 13000,
+              "output": "Carol"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": 8,
+      "category": "logic",
+      "difficulty": "hard",
+      "gold_answer": "Amy",
+      "conditions": {
+        "A_original": {
+          "user_prompt": "Three friends, Dee, Eli, and Fay, are standing in a line. Dee is not first. Fay is not last. Eli is first. Who is last?\nAnswer: Dee\n\nThree friends, Amy, Ben, and Cal, are standing in a line. Amy is not first. Cal is not last. Ben is first. Who is last?\nAnswer:",
+          "samples": [
+            {
+              "seed": 20000,
+              "output": "Fay"
+            }
+          ]
+        },
+        "B_delimiters": {
+          "user_prompt": "<EXAMPLES>\nThree friends, Dee, Eli, and Fay, are standing in a line. Dee is not first. Fay is not last. Eli is first. Who is last?\nAnswer: Dee\n</EXAMPLES>\n\n<TARGET>\nThree friends, Amy, Ben, and Cal, are standing in a line. Amy is not first. Cal is not last. Ben is first. Who is last?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 21000,
+              "output": "Amy"
+            }
+          ]
+        },
+        "C_delimiters_and_instruction": {
+          "user_prompt": "<EXAMPLES>\nThree friends, Dee, Eli, and Fay, are standing in a line. Dee is not first. Fay is not last. Eli is first. Who is last?\nAnswer: Dee\n</EXAMPLES>\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\n<TARGET>\nThree friends, Amy, Ben, and Cal, are standing in a line. Amy is not first. Cal is not last. Ben is first. Who is last?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 22000,
+              "output": "Ben"
+            }
+          ]
+        },
+        "D_instruction_only": {
+          "user_prompt": "Three friends, Dee, Eli, and Fay, are standing in a line. Dee is not first. Fay is not last. Eli is first. Who is last?\nAnswer: Dee\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\nThree friends, Amy, Ben, and Cal, are standing in a line. Amy is not first. Cal is not last. Ben is first. Who is last?\nAnswer:",
+          "samples": [
+            {
+              "seed": 23000,
+              "output": "Ben"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": 15,
+      "category": "extraction",
+      "difficulty": "medium",
+      "gold_answer": "support@example.com",
+      "conditions": {
+        "A_original": {
+          "user_prompt": "Text: \"Reach out to sales@company.org with questions.\"\nExtract the email address: sales@company.org\n\nText: \"Send feedback to hello@site.net anytime.\"\nExtract the email address: hello@site.net\n\nText: \"Contact us at support@example.com for help.\"\nExtract the email address:",
+          "samples": [
+            {
+              "seed": 30000,
+              "output": "contactus@example.com"
+            }
+          ]
+        },
+        "B_delimiters": {
+          "user_prompt": "<EXAMPLES>\nText: \"Reach out to sales@company.org with questions.\"\nExtract the email address: sales@company.org\n\nText: \"Send feedback to hello@site.net anytime.\"\nExtract the email address: hello@site.net\n</EXAMPLES>\n\n<TARGET>\nText: \"Contact us at support@example.com for help.\"\nExtract the email address:\n</TARGET>",
+          "samples": [
+            {
+              "seed": 31000,
+              "output": "text: \"contact@example.com\""
+            }
+          ]
+        },
+        "C_delimiters_and_instruction": {
+          "user_prompt": "<EXAMPLES>\nText: \"Reach out to sales@company.org with questions.\"\nExtract the email address: sales@company.org\n\nText: \"Send feedback to hello@site.net anytime.\"\nExtract the email address: hello@site.net\n</EXAMPLES>\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\n<TARGET>\nText: \"Contact us at support@example.com for help.\"\nExtract the email address:\n</TARGET>",
+          "samples": [
+            {
+              "seed": 32000,
+              "output": "contact us at support@example.com"
+            }
+          ]
+        },
+        "D_instruction_only": {
+          "user_prompt": "Text: \"Reach out to sales@company.org with questions.\"\nExtract the email address: sales@company.org\n\nText: \"Send feedback to hello@site.net anytime.\"\nExtract the email address: hello@site.net\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\nText: \"Contact us at support@example.com for help.\"\nExtract the email address:",
+          "samples": [
+            {
+              "seed": 33000,
+              "output": "Support@example.com"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": 1,
+      "category": "math",
+      "difficulty": "easy",
+      "gold_answer": "10",
+      "conditions": {
+        "A_original": {
+          "user_prompt": "A train travels 60 miles in 2 hours. What is its speed in miles per hour?\nAnswer: 30\n\nA book costs $12. If you buy 3 books, how much do you pay?\nAnswer: 36\n\nA store sells apples for $2 each. If Maria buys 5 apples, how much does she pay in total?\nAnswer:",
+          "samples": [
+            {
+              "seed": 40000,
+              "output": "The answer is $10.\n\nTo calculate the total cost of buying 5 apples at $2 each:\n\n$$\n5 \\text{ apples} \\times \\$2/\\text{apple} = \\$10\n$$\n\nSo Maria pays $10 in total for 5 apples."
+            }
+          ]
+        },
+        "B_delimiters": {
+          "user_prompt": "<EXAMPLES>\nA train travels 60 miles in 2 hours. What is its speed in miles per hour?\nAnswer: 30\n\nA book costs $12. If you buy 3 books, how much do you pay?\nAnswer: 36\n</EXAMPLES>\n\n<TARGET>\nA store sells apples for $2 each. If Maria buys 5 apples, how much does she pay in total?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 41000,
+              "output": "$10"
+            }
+          ]
+        },
+        "C_delimiters_and_instruction": {
+          "user_prompt": "<EXAMPLES>\nA train travels 60 miles in 2 hours. What is its speed in miles per hour?\nAnswer: 30\n\nA book costs $12. If you buy 3 books, how much do you pay?\nAnswer: 36\n</EXAMPLES>\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\n<TARGET>\nA store sells apples for $2 each. If Maria buys 5 apples, how much does she pay in total?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 42000,
+              "output": "$10"
+            }
+          ]
+        },
+        "D_instruction_only": {
+          "user_prompt": "A train travels 60 miles in 2 hours. What is its speed in miles per hour?\nAnswer: 30\n\nA book costs $12. If you buy 3 books, how much do you pay?\nAnswer: 36\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\nA store sells apples for $2 each. If Maria buys 5 apples, how much does she pay in total?\nAnswer:",
+          "samples": [
+            {
+              "seed": 43000,
+              "output": "$10"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": 2,
+      "category": "math",
+      "difficulty": "medium",
+      "gold_answer": "8",
+      "conditions": {
+        "A_original": {
+          "user_prompt": "If x + 3 = 10, what is the value of x?\nAnswer: 7\n\nIf x - 5 = 2, what is the value of x?\nAnswer: 7\n\nIf x + 7 = 15, what is the value of x?\nAnswer:",
+          "samples": [
+            {
+              "seed": 50000,
+              "output": "To solve for x in each equation:\n\n1. For \\(x + 3 = 10\\):\n   Subtract 3 from both sides to isolate x:\n   \\[\n   x + 3 - 3 = 10 - 3\n   \\]\n   Simplify:\n   \\[\n   x = 7\n   \\]\n\n2. For \\(x - 5 = 2\\):\n   Add 5 to both sides to isolate x:\n   \\[\n   x - 5 + 5 = 2 + 5\n   \\]\n   Simplify:\n   \\[\n   x = 7\n   \\]\n\n3. For \\(x + 7 = 15\\):\n   Subtract 7 from both sides to isolate x:\n   \\[\n   x + 7 - 7 = 15 - 7\n   \\]\n   Simplify:\n   \\[\n   x = 8\n   \\]\n\nSo, the values of"
+            }
+          ]
+        },
+        "B_delimiters": {
+          "user_prompt": "<EXAMPLES>\nIf x + 3 = 10, what is the value of x?\nAnswer: 7\n\nIf x - 5 = 2, what is the value of x?\nAnswer: 7\n</EXAMPLES>\n\n<TARGET>\nIf x + 7 = 15, what is the value of x?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 51000,
+              "output": "To solve for x in the equation x + 7 = 15, follow these steps:\n\n1. Start with the given equation:\n   x + 7 = 15\n\n2. Subtract 7 from both sides to isolate x:\n   x + 7 - 7 = 15 - 7\n\n3. Simplify:\n   x = 8\n\nSo, if x + 7 = 15, then x = 8."
+            }
+          ]
+        },
+        "C_delimiters_and_instruction": {
+          "user_prompt": "<EXAMPLES>\nIf x + 3 = 10, what is the value of x?\nAnswer: 7\n\nIf x - 5 = 2, what is the value of x?\nAnswer: 7\n</EXAMPLES>\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\n<TARGET>\nIf x + 7 = 15, what is the value of x?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 52000,
+              "output": "4"
+            }
+          ]
+        },
+        "D_instruction_only": {
+          "user_prompt": "If x + 3 = 10, what is the value of x?\nAnswer: 7\n\nIf x - 5 = 2, what is the value of x?\nAnswer: 7\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\nIf x + 7 = 15, what is the value of x?\nAnswer:",
+          "samples": [
+            {
+              "seed": 53000,
+              "output": "4"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": 6,
+      "category": "logic",
+      "difficulty": "medium",
+      "gold_answer": "Yes",
+      "conditions": {
+        "A_original": {
+          "user_prompt": "All birds can fly. Tweety is a bird. Can Tweety fly?\nAnswer: Yes\n\nAll squares have four sides. This shape is a square. Does it have four sides?\nAnswer: Yes\n\nAll cats are animals. Whiskers is a cat. Is Whiskers an animal?\nAnswer:",
+          "samples": [
+            {
+              "seed": 60000,
+              "output": "Yes"
+            }
+          ]
+        },
+        "B_delimiters": {
+          "user_prompt": "<EXAMPLES>\nAll birds can fly. Tweety is a bird. Can Tweety fly?\nAnswer: Yes\n\nAll squares have four sides. This shape is a square. Does it have four sides?\nAnswer: Yes\n</EXAMPLES>\n\n<TARGET>\nAll cats are animals. Whiskers is a cat. Is Whiskers an animal?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 61000,
+              "output": "Yes"
+            }
+          ]
+        },
+        "C_delimiters_and_instruction": {
+          "user_prompt": "<EXAMPLES>\nAll birds can fly. Tweety is a bird. Can Tweety fly?\nAnswer: Yes\n\nAll squares have four sides. This shape is a square. Does it have four sides?\nAnswer: Yes\n</EXAMPLES>\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\n<TARGET>\nAll cats are animals. Whiskers is a cat. Is Whiskers an animal?\n</TARGET>\n\nAnswer:",
+          "samples": [
+            {
+              "seed": 62000,
+              "output": "Yes"
+            }
+          ]
+        },
+        "D_instruction_only": {
+          "user_prompt": "All birds can fly. Tweety is a bird. Can Tweety fly?\nAnswer: Yes\n\nAll squares have four sides. This shape is a square. Does it have four sides?\nAnswer: Yes\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\nAll cats are animals. Whiskers is a cat. Is Whiskers an animal?\nAnswer:",
+          "samples": [
+            {
+              "seed": 63000,
+              "output": "Yes"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": 9,
+      "category": "classification",
+      "difficulty": "easy",
+      "gold_answer": "negative",
+      "conditions": {
+        "A_original": {
+          "user_prompt": "Review: \"Amazing experience, would come back again!\"\nSentiment: positive\n\nReview: \"It was okay, nothing special.\"\nSentiment: neutral\n\nReview: \"The food was cold and the service was slow.\"\nSentiment (positive, neutral, or negative):",
+          "samples": [
+            {
+              "seed": 70000,
+              "output": "Neutral"
+            }
+          ]
+        },
+        "B_delimiters": {
+          "user_prompt": "<EXAMPLES>\nReview: \"Amazing experience, would come back again!\"\nSentiment: positive\n\nReview: \"It was okay, nothing special.\"\nSentiment: neutral\n</EXAMPLES>\n\n<TARGET>\nReview: \"The food was cold and the service was slow.\"\nSentiment (positive, neutral, or negative):\n</TARGET>",
+          "samples": [
+            {
+              "seed": 71000,
+              "output": "Target: negative\n\nExplanation:\n- The review states that the food was cold (\"cold and\"), which is not a positive attribute.\n- It also mentions that the service was slow (\"the service was slow.\"), indicating a negative sentiment.\n\nThis matches the expected sentiment for a negative review about food quality and service."
+            }
+          ]
+        },
+        "C_delimiters_and_instruction": {
+          "user_prompt": "<EXAMPLES>\nReview: \"Amazing experience, would come back again!\"\nSentiment: positive\n\nReview: \"It was okay, nothing special.\"\nSentiment: neutral\n</EXAMPLES>\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\n<TARGET>\nReview: \"The food was cold and the service was slow.\"\nSentiment (positive, neutral, or negative):\n</TARGET>",
+          "samples": [
+            {
+              "seed": 72000,
+              "output": "negative"
+            }
+          ]
+        },
+        "D_instruction_only": {
+          "user_prompt": "Review: \"Amazing experience, would come back again!\"\nSentiment: positive\n\nReview: \"It was okay, nothing special.\"\nSentiment: neutral\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\nReview: \"The food was cold and the service was slow.\"\nSentiment (positive, neutral, or negative):",
+          "samples": [
+            {
+              "seed": 73000,
+              "output": "negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": 13,
+      "category": "extraction",
+      "difficulty": "easy",
+      "gold_answer": "John Smith",
+      "conditions": {
+        "A_original": {
+          "user_prompt": "Text: \"Maria Lopez moved to Boston in 2015.\"\nExtract the person's name: Maria Lopez\n\nText: \"David Chen graduated in 2020.\"\nExtract the person's name: David Chen\n\nText: \"John Smith was born on March 5, 1990 in Chicago.\"\nExtract the person's name:",
+          "samples": [
+            {
+              "seed": 80000,
+              "output": "John Smith"
+            }
+          ]
+        },
+        "B_delimiters": {
+          "user_prompt": "<EXAMPLES>\nText: \"Maria Lopez moved to Boston in 2015.\"\nExtract the person's name: Maria Lopez\n\nText: \"David Chen graduated in 2020.\"\nExtract the person's name: David Chen\n</EXAMPLES>\n\n<TARGET>\nText: \"John Smith was born on March 5, 1990 in Chicago.\"\nExtract the person's name:\n</TARGET>",
+          "samples": [
+            {
+              "seed": 81000,
+              "output": "John Smith"
+            }
+          ]
+        },
+        "C_delimiters_and_instruction": {
+          "user_prompt": "<EXAMPLES>\nText: \"Maria Lopez moved to Boston in 2015.\"\nExtract the person's name: Maria Lopez\n\nText: \"David Chen graduated in 2020.\"\nExtract the person's name: David Chen\n</EXAMPLES>\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\n<TARGET>\nText: \"John Smith was born on March 5, 1990 in Chicago.\"\nExtract the person's name:\n</TARGET>",
+          "samples": [
+            {
+              "seed": 82000,
+              "output": "John Smith"
+            }
+          ]
+        },
+        "D_instruction_only": {
+          "user_prompt": "Text: \"Maria Lopez moved to Boston in 2015.\"\nExtract the person's name: Maria Lopez\n\nText: \"David Chen graduated in 2020.\"\nExtract the person's name: David Chen\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\nText: \"John Smith was born on March 5, 1990 in Chicago.\"\nExtract the person's name:",
+          "samples": [
+            {
+              "seed": 83000,
+              "output": "John Smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": 16,
+      "category": "code",
+      "difficulty": "easy",
+      "gold_answer": "def add(a, b):\n    return a + b",
+      "conditions": {
+        "A_original": {
+          "user_prompt": "Write a Python function called `subtract` that takes two numbers and returns their difference.\nCode:\ndef subtract(a, b):\n    return a - b\n\nWrite a Python function called `add` that takes two numbers and returns their sum.\nCode:",
+          "samples": [
+            {
+              "seed": 90000,
+              "output": "def add(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef add(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef add(a, b):\n    return a + b"
+            }
+          ]
+        },
+        "B_delimiters": {
+          "user_prompt": "<EXAMPLES>\nWrite a Python function called `subtract` that takes two numbers and returns their difference.\nCode:\ndef subtract(a, b):\n    return a - b\n</EXAMPLES>\n\n<TARGET>\nWrite a Python function called `add` that takes two numbers and returns their sum.\n</TARGET>\n\nCode:",
+          "samples": [
+            {
+              "seed": 91000,
+              "output": "To create the `subtract` function in Python, you can define it as follows:\n\n```python\ndef subtract(a, b):\n    return a - b\n```\n\nThis code defines a function named `subtract` that accepts two arguments (`a` and `b`) and returns their difference.\n\nFor the `add` function, which takes two numbers and returns their sum, you would write something similar to this:\n\n```python\ndef add(a, b):\n    return a + b\n```\n\nHere is how you could call these functions with example inputs:\n\n```python\nprint(subtract(10, 5))  # Output: 5\nprint(add(3, 4))        # Output: 7\n```\n\nThese examples demonstrate how to use the provided functions to perform basic arithmetic operations on integers."
+            }
+          ]
+        },
+        "C_delimiters_and_instruction": {
+          "user_prompt": "<EXAMPLES>\nWrite a Python function called `subtract` that takes two numbers and returns their difference.\nCode:\ndef subtract(a, b):\n    return a - b\n</EXAMPLES>\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\n<TARGET>\nWrite a Python function called `add` that takes two numbers and returns their sum.\n</TARGET>\n\nCode:",
+          "samples": [
+            {
+              "seed": 92000,
+              "output": "def add(a, b):\n    return a + b\n\ntarget_question = \"Write a Python function called 'multiply' that takes two numbers and returns their product.\"\ncode = multiply(2, 3)\nprint(target_question) # Output: Write a Python function called 'multiply' that takes two numbers and returns their product.\nprint(code) # Output: 6"
+            }
+          ]
+        },
+        "D_instruction_only": {
+          "user_prompt": "Write a Python function called `subtract` that takes two numbers and returns their difference.\nCode:\ndef subtract(a, b):\n    return a - b\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question.\n\nWrite a Python function called `add` that takes two numbers and returns their sum.\nCode:",
+          "samples": [
+            {
+              "seed": 93000,
+              "output": "def add(a, b):\n    return a + b\n\nThe items above are examples of the task format.\nSolve the target question independently.\nDo not copy names, numbers, or answers from the examples.\nReturn only the answer to the target question."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
