@@ -1,0 +1,770 @@
+[
+  {
+    "task_id": 1,
+    "category": "math",
+    "difficulty": "easy",
+    "answer_type": "number",
+    "gold_answer": "10",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 10.0,
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 10.0,
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": 50.0,
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 10.0,
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 2,
+    "category": "math",
+    "difficulty": "medium",
+    "answer_type": "number",
+    "gold_answer": "8",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 8.0,
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 8.0,
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 8.0,
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 8.0,
+        "flags": [
+          "needs_review"
+        ],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 3,
+    "category": "math",
+    "difficulty": "medium",
+    "answer_type": "number",
+    "gold_answer": "24",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 24.0,
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 24.0,
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 24.0,
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 24.0,
+        "flags": [
+          "needs_review"
+        ],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 4,
+    "category": "math",
+    "difficulty": "hard",
+    "answer_type": "number",
+    "gold_answer": "10",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 10.0,
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": 1.0,
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": 10.0,
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": 5.0,
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 5,
+    "category": "logic",
+    "difficulty": "easy",
+    "answer_type": "name",
+    "gold_answer": "Carol",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "Bob",
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "Carol",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "5. **Thus, the order from tallest to shortest is:** \\[ \\text{Tallest} > \\text{Al",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "Frank",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 6,
+    "category": "logic",
+    "difficulty": "medium",
+    "answer_type": "yesno",
+    "gold_answer": "Yes",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "needs_review"
+        ],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "yes",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "yes",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "yes",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 7,
+    "category": "logic",
+    "difficulty": "medium",
+    "answer_type": "yesno",
+    "gold_answer": "No",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "no",
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "no",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "no",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "no",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 8,
+    "category": "logic",
+    "difficulty": "hard",
+    "answer_type": "name",
+    "gold_answer": "Amy",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "Ben",
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "Ben",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "- We have three positions left: 1, 2, and 3. - Since Ben is not in position 4, h",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "Fay",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 9,
+    "category": "classification",
+    "difficulty": "easy",
+    "answer_type": "label",
+    "gold_answer": "negative",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "negative",
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "negative",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "needs_review"
+        ],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "neutral",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 10,
+    "category": "classification",
+    "difficulty": "easy",
+    "answer_type": "label",
+    "gold_answer": "positive",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "positive",
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "positive",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "positive",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "positive",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 11,
+    "category": "classification",
+    "difficulty": "medium",
+    "answer_type": "label",
+    "gold_answer": "spam",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "spam",
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "spam",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "spam",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "not spam",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 12,
+    "category": "classification",
+    "difficulty": "medium",
+    "answer_type": "label",
+    "gold_answer": "biology",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "needs_review"
+        ],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "biology",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "needs_review"
+        ],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "physics",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 13,
+    "category": "extraction",
+    "difficulty": "easy",
+    "answer_type": "string",
+    "gold_answer": "John Smith",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": " John Smith",
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "John Smith",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "The person's name is John Smith.",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "John Smith",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 14,
+    "category": "extraction",
+    "difficulty": "medium",
+    "answer_type": "string",
+    "gold_answer": "June 14, 2026",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": " June 14, 2026",
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "June 14, 2026",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "June 14, 2026",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "June 14, 2026",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 15,
+    "category": "extraction",
+    "difficulty": "medium",
+    "answer_type": "string",
+    "gold_answer": "support@example.com",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": " \"support@example.com\"\nThe email address extracted from the text is \"support@exa",
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "support@example.com",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "The email address extracted from the text is: support@example.com.",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": "contactus@example.com",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 16,
+    "category": "code",
+    "difficulty": "easy",
+    "answer_type": "code",
+    "gold_answer": "def add(a, b):\n    return a + b",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "empty_output"
+        ],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "empty_output"
+        ],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "3/3 tests passed",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "3/3 tests passed",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 17,
+    "category": "code",
+    "difficulty": "medium",
+    "answer_type": "code",
+    "gold_answer": "def is_even(n):\n    return n % 2 == 0",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "empty_output"
+        ],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "empty_output"
+        ],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "3/3 tests passed",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "3/3 tests passed",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 18,
+    "category": "code",
+    "difficulty": "medium",
+    "answer_type": "code",
+    "gold_answer": "def max_of_two(a, b):\n    return a if a > b else b",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "empty_output"
+        ],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "empty_output"
+        ],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "3/3 tests passed",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "3/3 tests passed",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 19,
+    "category": "code",
+    "difficulty": "hard",
+    "answer_type": "code",
+    "gold_answer": "def reverse_list(lst):\n    result = []\n    for x in lst:\n        result = [x] + result\n    return result",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "empty_output"
+        ],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": null,
+        "flags": [
+          "empty_output"
+        ],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "3/3 tests passed",
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": true,
+        "final_correct": true,
+        "extracted": "3/3 tests passed",
+        "flags": [],
+        "overridden": false
+      }
+    }
+  },
+  {
+    "task_id": 20,
+    "category": "arithmetic_word_problem",
+    "difficulty": "hard",
+    "answer_type": "number",
+    "gold_answer": "9",
+    "conditions": {
+      "base_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": 8.0,
+        "flags": [],
+        "overridden": false
+      },
+      "base_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": 8.0,
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_zero_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": 8.0,
+        "flags": [],
+        "overridden": false
+      },
+      "instruct_few_shot": {
+        "auto_correct": false,
+        "final_correct": false,
+        "extracted": 5.0,
+        "flags": [],
+        "overridden": false
+      }
+    }
+  }
+]

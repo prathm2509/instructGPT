@@ -1,5 +1,7 @@
 # Next experiment: instruct few-shot failure audit
 
+> **Status: executed 2026-08-02** — implemented as `few_shot_failure_audit.py`, results in `few_shot_failure_audit.json`. Kept as the original design note.
+
 Extends `base_vs_instruct.json` — same notebook, same two models already loaded, no new downloads.
 
 ## What was found

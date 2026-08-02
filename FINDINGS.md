@@ -1,0 +1,4 @@
+after the first run these are the things i observed
+Instruction tuning fixes the "doesn't know when to stop" problem — every single base zero-shot and few-shot completion runs past the answer into noise or repetition; instruct zero-shot almost never does.
+Few-shot prompting is not uniformly good — it helps the base model terminate and often improves its accuracy, but it actively hurts the instruct model on this prompt set, which is a genuine, checkable claim you can make with these 20 examples as evidence.
+Task 9's instruct zero-shot refusal ("I am unable to provide...") despite the review text being right there in the prompt is worth a specific callout — that's the alignment/refusal behavior InstructGPT introduces, showing up as an over-cautious failure mode rather than a helpful one.

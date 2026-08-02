@@ -1,0 +1,614 @@
+{
+  "n_tasks": 20,
+  "conditions": {
+    "base_zero_shot": {
+      "overall": {
+        "correct": 11,
+        "n": 20,
+        "accuracy": 0.55,
+        "wilson_95ci": [
+          0.342,
+          0.742
+        ]
+      },
+      "overall_auto": {
+        "correct": 11,
+        "n": 20,
+        "accuracy": 0.55,
+        "wilson_95ci": [
+          0.342,
+          0.742
+        ]
+      },
+      "by_category": {
+        "arithmetic_word_problem": {
+          "correct": 0,
+          "n": 1,
+          "accuracy": 0.0,
+          "wilson_95ci": [
+            0.0,
+            0.793
+          ]
+        },
+        "classification": {
+          "correct": 3,
+          "n": 4,
+          "accuracy": 0.75,
+          "wilson_95ci": [
+            0.301,
+            0.954
+          ]
+        },
+        "code": {
+          "correct": 0,
+          "n": 4,
+          "accuracy": 0.0,
+          "wilson_95ci": [
+            0.0,
+            0.49
+          ]
+        },
+        "extraction": {
+          "correct": 3,
+          "n": 3,
+          "accuracy": 1.0,
+          "wilson_95ci": [
+            0.438,
+            1.0
+          ]
+        },
+        "logic": {
+          "correct": 1,
+          "n": 4,
+          "accuracy": 0.25,
+          "wilson_95ci": [
+            0.046,
+            0.699
+          ]
+        },
+        "math": {
+          "correct": 4,
+          "n": 4,
+          "accuracy": 1.0,
+          "wilson_95ci": [
+            0.51,
+            1.0
+          ]
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "correct": 4,
+          "n": 6,
+          "accuracy": 0.667,
+          "wilson_95ci": [
+            0.3,
+            0.903
+          ]
+        },
+        "medium": {
+          "correct": 6,
+          "n": 10,
+          "accuracy": 0.6,
+          "wilson_95ci": [
+            0.313,
+            0.832
+          ]
+        },
+        "hard": {
+          "correct": 1,
+          "n": 4,
+          "accuracy": 0.25,
+          "wilson_95ci": [
+            0.046,
+            0.699
+          ]
+        }
+      },
+      "behavior": {
+        "drift_rate": 0.1,
+        "drift_tasks": [
+          9,
+          10
+        ],
+        "mean_repetition": 0.025,
+        "refusals": [],
+        "empty_outputs": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "mean_chars": 153,
+        "median_chars": 26.0
+      }
+    },
+    "base_few_shot": {
+      "overall": {
+        "correct": 13,
+        "n": 20,
+        "accuracy": 0.65,
+        "wilson_95ci": [
+          0.433,
+          0.819
+        ]
+      },
+      "overall_auto": {
+        "correct": 13,
+        "n": 20,
+        "accuracy": 0.65,
+        "wilson_95ci": [
+          0.433,
+          0.819
+        ]
+      },
+      "by_category": {
+        "arithmetic_word_problem": {
+          "correct": 0,
+          "n": 1,
+          "accuracy": 0.0,
+          "wilson_95ci": [
+            0.0,
+            0.793
+          ]
+        },
+        "classification": {
+          "correct": 4,
+          "n": 4,
+          "accuracy": 1.0,
+          "wilson_95ci": [
+            0.51,
+            1.0
+          ]
+        },
+        "code": {
+          "correct": 0,
+          "n": 4,
+          "accuracy": 0.0,
+          "wilson_95ci": [
+            0.0,
+            0.49
+          ]
+        },
+        "extraction": {
+          "correct": 3,
+          "n": 3,
+          "accuracy": 1.0,
+          "wilson_95ci": [
+            0.438,
+            1.0
+          ]
+        },
+        "logic": {
+          "correct": 3,
+          "n": 4,
+          "accuracy": 0.75,
+          "wilson_95ci": [
+            0.301,
+            0.954
+          ]
+        },
+        "math": {
+          "correct": 3,
+          "n": 4,
+          "accuracy": 0.75,
+          "wilson_95ci": [
+            0.301,
+            0.954
+          ]
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "correct": 5,
+          "n": 6,
+          "accuracy": 0.833,
+          "wilson_95ci": [
+            0.436,
+            0.97
+          ]
+        },
+        "medium": {
+          "correct": 8,
+          "n": 10,
+          "accuracy": 0.8,
+          "wilson_95ci": [
+            0.49,
+            0.943
+          ]
+        },
+        "hard": {
+          "correct": 0,
+          "n": 4,
+          "accuracy": 0.0,
+          "wilson_95ci": [
+            0.0,
+            0.49
+          ]
+        }
+      },
+      "behavior": {
+        "drift_rate": 0.8,
+        "drift_tasks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          20
+        ],
+        "mean_repetition": 0.475,
+        "refusals": [],
+        "empty_outputs": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "mean_chars": 568.5,
+        "median_chars": 683.5
+      }
+    },
+    "instruct_zero_shot": {
+      "overall": {
+        "correct": 14,
+        "n": 20,
+        "accuracy": 0.7,
+        "wilson_95ci": [
+          0.481,
+          0.855
+        ]
+      },
+      "overall_auto": {
+        "correct": 14,
+        "n": 20,
+        "accuracy": 0.7,
+        "wilson_95ci": [
+          0.481,
+          0.855
+        ]
+      },
+      "by_category": {
+        "arithmetic_word_problem": {
+          "correct": 0,
+          "n": 1,
+          "accuracy": 0.0,
+          "wilson_95ci": [
+            0.0,
+            0.793
+          ]
+        },
+        "classification": {
+          "correct": 2,
+          "n": 4,
+          "accuracy": 0.5,
+          "wilson_95ci": [
+            0.15,
+            0.85
+          ]
+        },
+        "code": {
+          "correct": 4,
+          "n": 4,
+          "accuracy": 1.0,
+          "wilson_95ci": [
+            0.51,
+            1.0
+          ]
+        },
+        "extraction": {
+          "correct": 3,
+          "n": 3,
+          "accuracy": 1.0,
+          "wilson_95ci": [
+            0.438,
+            1.0
+          ]
+        },
+        "logic": {
+          "correct": 2,
+          "n": 4,
+          "accuracy": 0.5,
+          "wilson_95ci": [
+            0.15,
+            0.85
+          ]
+        },
+        "math": {
+          "correct": 3,
+          "n": 4,
+          "accuracy": 0.75,
+          "wilson_95ci": [
+            0.301,
+            0.954
+          ]
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "correct": 3,
+          "n": 6,
+          "accuracy": 0.5,
+          "wilson_95ci": [
+            0.188,
+            0.812
+          ]
+        },
+        "medium": {
+          "correct": 9,
+          "n": 10,
+          "accuracy": 0.9,
+          "wilson_95ci": [
+            0.596,
+            0.982
+          ]
+        },
+        "hard": {
+          "correct": 2,
+          "n": 4,
+          "accuracy": 0.5,
+          "wilson_95ci": [
+            0.15,
+            0.85
+          ]
+        }
+      },
+      "behavior": {
+        "drift_rate": 0.0,
+        "drift_tasks": [],
+        "mean_repetition": 0.0,
+        "refusals": [
+          9
+        ],
+        "empty_outputs": [],
+        "mean_chars": 245.1,
+        "median_chars": 178.0
+      }
+    },
+    "instruct_few_shot": {
+      "overall": {
+        "correct": 12,
+        "n": 20,
+        "accuracy": 0.6,
+        "wilson_95ci": [
+          0.387,
+          0.781
+        ]
+      },
+      "overall_auto": {
+        "correct": 12,
+        "n": 20,
+        "accuracy": 0.6,
+        "wilson_95ci": [
+          0.387,
+          0.781
+        ]
+      },
+      "by_category": {
+        "arithmetic_word_problem": {
+          "correct": 0,
+          "n": 1,
+          "accuracy": 0.0,
+          "wilson_95ci": [
+            0.0,
+            0.793
+          ]
+        },
+        "classification": {
+          "correct": 1,
+          "n": 4,
+          "accuracy": 0.25,
+          "wilson_95ci": [
+            0.046,
+            0.699
+          ]
+        },
+        "code": {
+          "correct": 4,
+          "n": 4,
+          "accuracy": 1.0,
+          "wilson_95ci": [
+            0.51,
+            1.0
+          ]
+        },
+        "extraction": {
+          "correct": 2,
+          "n": 3,
+          "accuracy": 0.667,
+          "wilson_95ci": [
+            0.208,
+            0.939
+          ]
+        },
+        "logic": {
+          "correct": 2,
+          "n": 4,
+          "accuracy": 0.5,
+          "wilson_95ci": [
+            0.15,
+            0.85
+          ]
+        },
+        "math": {
+          "correct": 3,
+          "n": 4,
+          "accuracy": 0.75,
+          "wilson_95ci": [
+            0.301,
+            0.954
+          ]
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "correct": 4,
+          "n": 6,
+          "accuracy": 0.667,
+          "wilson_95ci": [
+            0.3,
+            0.903
+          ]
+        },
+        "medium": {
+          "correct": 7,
+          "n": 10,
+          "accuracy": 0.7,
+          "wilson_95ci": [
+            0.397,
+            0.892
+          ]
+        },
+        "hard": {
+          "correct": 1,
+          "n": 4,
+          "accuracy": 0.25,
+          "wilson_95ci": [
+            0.046,
+            0.699
+          ]
+        }
+      },
+      "behavior": {
+        "drift_rate": 0.05,
+        "drift_tasks": [
+          4
+        ],
+        "mean_repetition": 0.054,
+        "refusals": [],
+        "empty_outputs": [],
+        "mean_chars": 107.0,
+        "median_chars": 17.0
+      }
+    }
+  },
+  "pairwise": {
+    "base_zero_shot__vs__base_few_shot": {
+      "only_first_correct": [
+        4
+      ],
+      "only_second_correct": [
+        5,
+        6,
+        12
+      ],
+      "mcnemar_exact_p": 0.625
+    },
+    "base_zero_shot__vs__instruct_zero_shot": {
+      "only_first_correct": [
+        1,
+        9
+      ],
+      "only_second_correct": [
+        6,
+        16,
+        17,
+        18,
+        19
+      ],
+      "mcnemar_exact_p": 0.4531
+    },
+    "base_zero_shot__vs__instruct_few_shot": {
+      "only_first_correct": [
+        4,
+        9,
+        11,
+        15
+      ],
+      "only_second_correct": [
+        6,
+        16,
+        17,
+        18,
+        19
+      ],
+      "mcnemar_exact_p": 1.0
+    },
+    "base_few_shot__vs__instruct_zero_shot": {
+      "only_first_correct": [
+        1,
+        5,
+        9,
+        12
+      ],
+      "only_second_correct": [
+        4,
+        16,
+        17,
+        18,
+        19
+      ],
+      "mcnemar_exact_p": 1.0
+    },
+    "base_few_shot__vs__instruct_few_shot": {
+      "only_first_correct": [
+        5,
+        9,
+        11,
+        12,
+        15
+      ],
+      "only_second_correct": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "mcnemar_exact_p": 1.0
+    },
+    "instruct_zero_shot__vs__instruct_few_shot": {
+      "only_first_correct": [
+        4,
+        11,
+        15
+      ],
+      "only_second_correct": [
+        1
+      ],
+      "mcnemar_exact_p": 0.625
+    }
+  },
+  "needs_review": [
+    {
+      "task_id": 2,
+      "condition": "instruct_few_shot",
+      "extracted": 8.0
+    },
+    {
+      "task_id": 3,
+      "condition": "instruct_few_shot",
+      "extracted": 24.0
+    },
+    {
+      "task_id": 6,
+      "condition": "base_zero_shot",
+      "extracted": null
+    },
+    {
+      "task_id": 9,
+      "condition": "instruct_zero_shot",
+      "extracted": null
+    },
+    {
+      "task_id": 12,
+      "condition": "base_zero_shot",
+      "extracted": null
+    },
+    {
+      "task_id": 12,
+      "condition": "instruct_zero_shot",
+      "extracted": null
+    }
+  ],
+  "overrides_applied": []
+}

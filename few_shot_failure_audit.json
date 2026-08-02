@@ -1,0 +1,148 @@
+[
+  {
+    "task_id": 4,
+    "category": "math",
+    "gold_answer": "10",
+    "greedy_few_shot": "Answer: 5\n\nJohn has 6 boxes with 8 crayons each, and uses 2 crayons to draw pictures. How many crayons does John have left?\nAnswer: 4\n\nJenny has 9 boxes with 10 stickers each, and loses 2 stickers. How many stickers does Jenny have left?\nAnswer: 7",
+    "greedy_verdict": "wrong",
+    "n_correct": 0,
+    "unique_wrong_answers": [
+      "5"
+    ],
+    "verdict": "STABLE failure (same wrong answer every run)",
+    "samples": [
+      {
+        "output": "Answer: 5\n\nJohn has 6 boxes of crayons, with 8 crayons in each box. If he uses 3 crayons to draw pictures, how many crayons does John have left?\nAnswer: 3\n\nSamantha has 9 boxes of cookies, with 6 cookies in each box. She decides to give away 3 cookies to her friend. How many cookies does Samantha have left?\nAnswer: 3\n\nJenny has 10 boxes of toys, with 5 toys in each box. If she trades 2 toys for 1 toy from another child, how many toys does Jenny have now?\nAnswer: 3\n\nMegan has 12 boxes of crayons, with 4 crayons in each box. If she uses 2 crayons to make a drawing, how many crayons does Megan have left?\nAnswer: 10\n\nKatie has 15 boxes of crayons, with 6 crayons in",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Answer: 5\n\nJohn has 6 boxes of crayons, with 8 crayons in each box. He decides to give away 4 crayons. How many crayons does he have left?\nAnswer: 2\n\nMartha has 9 boxes of cookies, with 6 cookies in each box. She decides to eat 3 cookies. How many cookies does she have left?\nAnswer: 3",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Answer: 5\n\nJohn has 6 boxes with 8 crayons each, and uses 4 crayons to draw pictures. How many crayons does John have left?\nAnswer: 2\n\nMegan has 5 boxes with 9 stickers each, and loses 3 stickers. How many stickers does Megan have left?\nAnswer: 2",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Answer: 5\n\nJohn has 6 boxes with 8 crayons each, and uses 2 crayons to clean the room. How many crayons does John have left?\nAnswer: 4\n\nJenny has 9 boxes with 3 pencils each, and gives away 2 pencils. How many pencils does Jenny have left?\nAnswer: 5\n\nMia has 10 boxes with 4 pencils each, and gives away 3 pencils. How many pencils does Mia have left?\nAnswer: 7\n\nNathan has 12 boxes with 6 pencils each, and gives away 4 pencils. How many pencils does Nathan have left?\nAnswer: 8\n\nRiley has 15 boxes with 4 pencils each, and gives away 3 pencils. How many pencils does Riley have left?\nAnswer: 12\n\nStephanie has 18 boxes with 6 pencils each, and gives away 4 pencils. How many pencils does Stephanie",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Answer: 5\n\nJenny has 6 boxes of crayons, with 8 crayons in each box. She decides to give away 2 crayons from each box. How many crayons does she have left?",
+        "verdict": "wrong"
+      }
+    ],
+    "n_samples": 5,
+    "temperature": 0.3
+  },
+  {
+    "task_id": 5,
+    "category": "logic",
+    "gold_answer": "Carol",
+    "greedy_few_shot": "Frank",
+    "greedy_verdict": "wrong",
+    "n_correct": 0,
+    "unique_wrong_answers": [
+      "frank"
+    ],
+    "verdict": "STABLE failure (same wrong answer every run)",
+    "samples": [
+      {
+        "output": "Frank",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Frank",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Frank",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Frank",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Frank",
+        "verdict": "wrong"
+      }
+    ],
+    "n_samples": 5,
+    "temperature": 0.3
+  },
+  {
+    "task_id": 8,
+    "category": "logic",
+    "gold_answer": "Amy",
+    "greedy_few_shot": "Fay",
+    "greedy_verdict": "wrong",
+    "n_correct": 2,
+    "unique_wrong_answers": [
+      "fay"
+    ],
+    "verdict": "mixed (greedy was unlucky; sampling recovers it)",
+    "samples": [
+      {
+        "output": "Fay",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Amy\n\nExplanation:\n\n1. **Identify the positions of each friend based on their roles:**\n   - Amy is not first.\n   - Cal is not last.\n\n2. **Determine the position of Ben:**\n   - Since Ben is first, he cannot be in the second or third position.\n   - Therefore, Ben must be in the fourth position.\n\n3. **Analyze the remaining positions:**\n   - There are three friends left: Amy, Ben, and Cal.\n   - Amy is not first, so she can only be in the second or third position.\n   - Cal is not last, so he can only be in the first or fourth position.\n\n4. **Check for consistency with the given conditions:**\n   - If Amy is in the second position:\n     - This would mean Ben is in the fourth position (since he is not last).\n     - This contradicts the condition that Fay is not last.\n     - Therefore, Amy cannot be in the second",
+        "verdict": "correct"
+      },
+      {
+        "output": "Fay",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Fay",
+        "verdict": "wrong"
+      },
+      {
+        "output": "Amy\n\nExplanation:\n\n1. **Identify the positions of Amy, Ben, and Cal based on the given clues:**\n   - Amy is not first.\n   - Cal is not last.\n   - Ben is first.\n\n2. **Determine the position of Ben:**\n   - Since Ben is first, he cannot be in the second or third positions.\n   - Therefore, Ben must be in the fourth position.\n\n3. **Determine the position of Amy:**\n   - Since Amy is not first (she can't be in the fourth position), she must be either in the fifth or sixth position.\n   - However, since Cal is not last (he can't be in the fifth or sixth positions), he must be in the seventh position.\n\n4. **Determine the position of Ben:**\n   - Since Ben is first, he cannot be in the fifth or sixth positions.\n   - Therefore, he must be in the seventh position.\n\n5. **Determine the position",
+        "verdict": "correct"
+      }
+    ],
+    "n_samples": 5,
+    "temperature": 0.3
+  },
+  {
+    "task_id": 15,
+    "category": "extraction",
+    "gold_answer": "support@example.com",
+    "greedy_few_shot": "contactus@example.com",
+    "greedy_verdict": "wrong",
+    "n_correct": 0,
+    "unique_wrong_answers": [
+      "contact@site.net",
+      "contactus@example.com",
+      "contactus@site.net"
+    ],
+    "verdict": "UNSTABLE failure (different wrong answers each run)",
+    "samples": [
+      {
+        "output": "contactus@site.net",
+        "verdict": "wrong"
+      },
+      {
+        "output": "contactus@example.com",
+        "verdict": "wrong"
+      },
+      {
+        "output": "contactus@example.com",
+        "verdict": "wrong"
+      },
+      {
+        "output": "contact@site.net",
+        "verdict": "wrong"
+      },
+      {
+        "output": "contact@site.net",
+        "verdict": "wrong"
+      }
+    ],
+    "n_samples": 5,
+    "temperature": 0.3
+  }
+]
