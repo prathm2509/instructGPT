@@ -1,0 +1,1 @@
+just adding this for anyone that might be inclined to pick up and read the literature for proximal policy optimization and subsequently direct preference optimization; try to learn a bit about the Bradley-Terry loss first (or atleast emphasize on it), since it hels a lot and allows you to build intuition about these optimization algorithms
