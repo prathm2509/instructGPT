@@ -85,8 +85,9 @@ def grade_record(record, task, condition):
         "gold_answer": task["gold_answer"],
         "answer_type": answer_type,
         "extraction_version": EXTRACTION_VERSION,
+        "n_output_tokens": record.get("n_output_tokens"),
     }
-    if record["error"]:
+    if record.get("error"):
         base.update({"status": "unparsed", "prediction": None, "strategy": None,
                      "candidates": [], "unit": None,
                      "flags": ["generation_error"], "correct": False})
@@ -129,7 +130,7 @@ def summarize(predictions):
             "n_parsed": n_parsed,
             "n_unparsed_or_failed": n - n_parsed,
             "mean_output_tokens": round(
-                sum(p["n_output_tokens"] or 0 for p in preds) / n, 1) if n else 0.0,
+                sum(p.get("n_output_tokens") or 0 for p in preds) / n, 1) if n else 0.0,
             "by_category": {
                 cat: {
                     "n": len(rows),
