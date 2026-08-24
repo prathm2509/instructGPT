@@ -9,7 +9,7 @@ python grade.py && python metrics.py && python report.py
 
 Grading rules are documented in `eval/README.md`. Interpretation lives in `FINDINGS.md`; every number here is computed from `base_vs_instruct.json`.
 
-> **Disclosure.** The grading pipeline in `eval/` and the cell-by-cell grading audit were built and run by an AI assistant (Claude) on my behalf, including the extraction rules and the hand-verification of all 80 graded cells. The model completions being graded, the task set, and the interpretation in `FINDINGS.md` are my own work. I state this so readers can weigh the methodology knowing who produced it.
+> **Disclosure.** The grading pipeline in `eval/` and the cell-by-cell grading audit were built and run by an AI assistant (Claude) on my behalf, including the extraction rules and the hand-verification of all 80 graded cells. I state this so readers can weigh the methodology knowing who produced it.
 
 ![accuracy and drift by condition](eval/metrics_chart.png)
 

@@ -1,0 +1,65 @@
+{
+  "frozen_utc": "2026-08-23T10:28:56Z",
+  "benchmark_file": "benchmark_v1.json",
+  "benchmark_version": "benchmark_v1",
+  "benchmark_sha256": "a52e11f09632f7f34ab3dae1683ee8389fc917b63f29211b1bd3111245e2b2ac",
+  "n_tasks": 50,
+  "tasks_by_category": {
+    "arithmetic_word_problem": 8,
+    "classification": 7,
+    "code": 4,
+    "extraction": 6,
+    "logic": 14,
+    "math": 11
+  },
+  "tasks_by_difficulty": {
+    "easy": 14,
+    "hard": 13,
+    "medium": 23
+  },
+  "models": {
+    "primary": {
+      "base": "Qwen/Qwen2.5-1.5B",
+      "instruct": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    "fallback": {
+      "base": "Qwen/Qwen2.5-0.5B",
+      "instruct": "Qwen/Qwen2.5-0.5B-Instruct"
+    },
+    "note": "Model IDs are CLI arguments to harness.run; the freeze binds the primary pair per the NEXT.md milestone, with the 0.5B pair as the proven fallback (used for the 2026-08-23 CPU smoke test)."
+  },
+  "decoding": {
+    "direct": {
+      "do_sample": false,
+      "temperature": null,
+      "n_samples": 1,
+      "max_new_tokens": 200
+    },
+    "smoke": {
+      "do_sample": true,
+      "temperature": 0.3,
+      "n_samples": 3,
+      "max_new_tokens": 200
+    },
+    "self_consistency_planned": {
+      "do_sample": true,
+      "temperature": 0.3,
+      "n_samples": [
+        3,
+        5
+      ]
+    }
+  },
+  "extraction_version": "extract_v1",
+  "seed_policy": "sha256(base_seed|benchmark_version|model_id|condition|problem_id|sample_index)[:8 hex]",
+  "base_seed": 20260823,
+  "system_prompt": "You are a helpful assistant.",
+  "history": [
+    {
+      "version": "benchmark_v1",
+      "sha256": "a52e11f09632f7f34ab3dae1683ee8389fc917b63f29211b1bd3111245e2b2ac",
+      "frozen_utc": "2026-08-23T10:28:56Z",
+      "note": "initial freeze: 20 tasks copied verbatim from prompts.json v1.0 + 30 new tasks (ids 21-50)"
+    }
+  ]
+}
