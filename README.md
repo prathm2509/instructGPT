@@ -77,5 +77,60 @@ python -m harness.grade --run-dir runs/<run-id>
 
 Session handoff + full status: `research/2026-08-24-benchmark-harness-implementation.md`.
 
+## Zero-shot CoT experiment (the next run)
+
+Plan: `research/2026-08-26-cot-experiment.md`. It compares the greedy **direct**
+baseline (`20260825-081614-direct`, report in
+`research/2026-08-25-direct-baseline-report.md`) against **zero-shot CoT** on the
+same frozen 50 tasks, for `Qwen2.5-1.5B` base + instruct. Kojima-style, not
+Wei-style: the prompt transform strips a trailing `Answer:`/`Code:` and appends
+`Think step by step, then give the final answer.` (`cot` is already registered
+in `harness/conditions.py`; `research/audit_cot_prompts.py` verifies it on all
+50 prompts, no GPU needed).
+
+Run the whole thing on a GPU Colab runtime (T4 is enough), from the repo root:
+
+```
+!git clone https://github.com/prathm2509/instructGPT.git   # or pull your branch
+%cd instructGPT
+!bash colab/run_cot.sh                 # setup + smoke + full run (~2h) + grade + download zip
+!bash colab/run_cot.sh --smoke-only    # stop after the 6-cell smoke check
+```
+
+The run is **disconnect-safe**: rerunning resumes into the same run dir (cells
+already generated are skipped, exact duplicates are removed before grading).
+Artifacts land in `runs/<ts>-cot/` (gitignored; download the zip via
+`colab/export.py` on Colab).
+
+Then compare the two graded runs locally:
+
+```
+python compare_runs.py --baseline runs/<direct-run-id> --treatment runs/<cot-run-id>
+```
+
+Both dirs need `predictions.json` (i.e. `python -m harness.grade --run-dir …`
+first). The direct run's outputs live where `20260825-081614-direct` was
+executed — download them back into `runs/`. The comparison prints the writeup
+tables (accuracy + Wilson CI both conditions, category deltas, mean output
+tokens, parse-failure counts, and the per-model flip table: direct✓/CoT✗ and
+the reverse) and writes `research/2026-08-26-cot-vs-direct-comparison.json`.
+
+Tooling added for this experiment:
+
+| File | What it is |
+|---|---|
+| `colab/setup.sh` | deps (`transformers>=4.45`, `accelerate`, `bitsandbytes`) + GPU sanity + frozen-benchmark check |
+| `colab/run_cot.sh` | the pipeline above (smoke → full run → grade → download) |
+| `colab/inspect.py` | by-hand checks: prompt tails, truncation at 400, parse statuses, full completions |
+| `colab/dedup_generations.py` | resume-safety: removes exact duplicates before grading |
+| `colab/export.py` | zip a run dir + Colab browser download |
+| `compare_runs.py` | direct-vs-CoT comparison (flip table etc.) → comparison JSON + markdown |
+| `research/audit_cot_prompts.py` | static check that every cot prompt ends with the frozen instruction |
+
+`harness/run.py` gained a resume mode: if `generations.jsonl` already exists in
+the output dir, cells whose (model, condition, problem, sample) record is
+already present are skipped (error cells are retried). Fresh-dir runs are
+unchanged.
+
 
    just a note: i do use ai to format these properly but most of the findings are through my experimentation. (just putting it out there to be completely candid to myself on this learning journey)

@@ -16,6 +16,12 @@ Model specs are "model_id:mode" where mode is raw (plain text) or chat
 Every generation is appended to <output-dir>/generations.jsonl immediately, so
 a crashed run loses nothing already written. Failures are written as records
 with an error field, never silently dropped.
+
+Resume: when generations.jsonl already exists in the output directory, cells
+whose (model, condition, problem, sample) record is already present are skipped
+instead of regenerated, so rerunning the same command (e.g., after a Colab
+disconnect) only produces the missing cells. Identical seeds make this exact
+for greedy decoding.
 """
 
 import argparse
@@ -24,7 +30,7 @@ import traceback
 from datetime import datetime
 from pathlib import Path
 
-from .common import append_jsonl, utc_now, write_json
+from .common import append_jsonl, read_jsonl, utc_now, write_json
 from .conditions import CONDITIONS
 from .models import generate_sample, load_model
 
@@ -145,8 +151,21 @@ def main(argv=None):
     print(f"run dir: {output_dir}")
 
     build_prompt = CONDITIONS[args.condition]
-    n_written = n_errors = 0
+    n_written = n_errors = n_skipped = 0
     started = utc_now()
+
+    # Resume: skip cells whose successful records already exist in this dir.
+    # Error records are kept, but those cells are retried, not skipped.
+    existing = set()
+    if generations_path.exists():
+        for rec in read_jsonl(generations_path):
+            if rec.get("error"):
+                continue
+            existing.add((rec.get("benchmark_version"), rec.get("model_id"),
+                          rec.get("condition"), rec.get("problem_id"),
+                          rec.get("sample_index")))
+    if existing:
+        print(f"resuming: {len(existing)} cell(s) already present, will be skipped")
 
     for spec in args.models:
         print(f"loading {spec['model_id']} ({spec['mode']})")
@@ -155,6 +174,11 @@ def main(argv=None):
             task = by_id[pid]
             user_text = build_prompt(task)
             for sample_index in range(args.n_samples):
+                cell = (benchmark_version, spec["model_id"], args.condition,
+                        pid, sample_index)
+                if cell in existing:
+                    n_skipped += 1
+                    continue
                 record = None
                 try:
                     record = generate_sample(
@@ -206,12 +230,13 @@ def main(argv=None):
         "started_utc": started,
         "finished_utc": utc_now(),
         "n_records_written": n_written,
+        "n_records_skipped": n_skipped,
         "n_errors": n_errors,
         "expected_records": len(args.models) * len(problem_ids) * args.n_samples,
     }
     write_json(output_dir / "run_summary.json", summary)
-    print(f"wrote {n_written}/{summary['expected_records']} records "
-          f"({n_errors} errors) -> {generations_path}")
+    print(f"wrote {n_written} new records ({n_skipped} already present, "
+          f"{n_errors} errors) -> {generations_path}")
 
 
 if __name__ == "__main__":
