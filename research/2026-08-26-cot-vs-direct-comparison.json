@@ -1,0 +1,252 @@
+{
+  "models": {
+    "Qwen/Qwen2.5-1.5B": {
+      "baseline": {
+        "n": 50,
+        "n_correct": 31,
+        "accuracy": 0.62,
+        "wilson_95ci": [
+          0.482,
+          0.741
+        ],
+        "n_parsed": 43,
+        "n_unparsed_or_failed": 7,
+        "mean_output_tokens": 88.4
+      },
+      "treatment": {
+        "n": 50,
+        "n_correct": 31,
+        "accuracy": 0.62,
+        "wilson_95ci": [
+          0.482,
+          0.741
+        ],
+        "n_parsed": 35,
+        "n_unparsed_or_failed": 15,
+        "mean_output_tokens": 98.6
+      },
+      "delta_accuracy": 0.0,
+      "delta_percentage_points": 0.0,
+      "by_category": {
+        "arithmetic_word_problem": {
+          "n": 8,
+          "baseline_correct": 4,
+          "treatment_correct": 6
+        },
+        "classification": {
+          "n": 7,
+          "baseline_correct": 5,
+          "treatment_correct": 1
+        },
+        "code": {
+          "n": 4,
+          "baseline_correct": 1,
+          "treatment_correct": 0
+        },
+        "extraction": {
+          "n": 6,
+          "baseline_correct": 6,
+          "treatment_correct": 5
+        },
+        "logic": {
+          "n": 14,
+          "baseline_correct": 7,
+          "treatment_correct": 8
+        },
+        "math": {
+          "n": 11,
+          "baseline_correct": 8,
+          "treatment_correct": 11
+        }
+      },
+      "flips": {
+        "regressions": [
+          {
+            "problem_id": 6,
+            "category": "logic"
+          },
+          {
+            "problem_id": 7,
+            "category": "logic"
+          },
+          {
+            "problem_id": 9,
+            "category": "classification"
+          },
+          {
+            "problem_id": 10,
+            "category": "classification"
+          },
+          {
+            "problem_id": 12,
+            "category": "classification"
+          },
+          {
+            "problem_id": 16,
+            "category": "code"
+          },
+          {
+            "problem_id": 45,
+            "category": "classification"
+          },
+          {
+            "problem_id": 49,
+            "category": "extraction"
+          }
+        ],
+        "fixes": [
+          {
+            "problem_id": 4,
+            "category": "math"
+          },
+          {
+            "problem_id": 20,
+            "category": "arithmetic_word_problem"
+          },
+          {
+            "problem_id": 28,
+            "category": "arithmetic_word_problem"
+          },
+          {
+            "problem_id": 31,
+            "category": "math"
+          },
+          {
+            "problem_id": 32,
+            "category": "math"
+          },
+          {
+            "problem_id": 38,
+            "category": "logic"
+          },
+          {
+            "problem_id": 39,
+            "category": "logic"
+          },
+          {
+            "problem_id": 40,
+            "category": "logic"
+          }
+        ],
+        "n_regressions": 8,
+        "n_fixes": 8
+      }
+    },
+    "Qwen/Qwen2.5-1.5B-Instruct": {
+      "baseline": {
+        "n": 50,
+        "n_correct": 38,
+        "accuracy": 0.76,
+        "wilson_95ci": [
+          0.626,
+          0.857
+        ],
+        "n_parsed": 44,
+        "n_unparsed_or_failed": 6,
+        "mean_output_tokens": 93.4
+      },
+      "treatment": {
+        "n": 50,
+        "n_correct": 37,
+        "accuracy": 0.74,
+        "wilson_95ci": [
+          0.604,
+          0.841
+        ],
+        "n_parsed": 43,
+        "n_unparsed_or_failed": 7,
+        "mean_output_tokens": 171.7
+      },
+      "delta_accuracy": -0.02,
+      "delta_percentage_points": -2.0,
+      "by_category": {
+        "arithmetic_word_problem": {
+          "n": 8,
+          "baseline_correct": 5,
+          "treatment_correct": 6
+        },
+        "classification": {
+          "n": 7,
+          "baseline_correct": 7,
+          "treatment_correct": 5
+        },
+        "code": {
+          "n": 4,
+          "baseline_correct": 0,
+          "treatment_correct": 0
+        },
+        "extraction": {
+          "n": 6,
+          "baseline_correct": 6,
+          "treatment_correct": 4
+        },
+        "logic": {
+          "n": 14,
+          "baseline_correct": 10,
+          "treatment_correct": 11
+        },
+        "math": {
+          "n": 11,
+          "baseline_correct": 10,
+          "treatment_correct": 11
+        }
+      },
+      "flips": {
+        "regressions": [
+          {
+            "problem_id": 6,
+            "category": "logic"
+          },
+          {
+            "problem_id": 14,
+            "category": "extraction"
+          },
+          {
+            "problem_id": 15,
+            "category": "extraction"
+          },
+          {
+            "problem_id": 20,
+            "category": "arithmetic_word_problem"
+          },
+          {
+            "problem_id": 46,
+            "category": "classification"
+          },
+          {
+            "problem_id": 47,
+            "category": "classification"
+          }
+        ],
+        "fixes": [
+          {
+            "problem_id": 28,
+            "category": "arithmetic_word_problem"
+          },
+          {
+            "problem_id": 32,
+            "category": "math"
+          },
+          {
+            "problem_id": 33,
+            "category": "arithmetic_word_problem"
+          },
+          {
+            "problem_id": 43,
+            "category": "logic"
+          },
+          {
+            "problem_id": 44,
+            "category": "logic"
+          }
+        ],
+        "n_regressions": 6,
+        "n_fixes": 5
+      }
+    }
+  },
+  "baseline_run": "20260826-direct-q4",
+  "treatment_run": "20260826-111745-cot",
+  "baseline_parse_failures": 13,
+  "treatment_parse_failures": 22
+}
