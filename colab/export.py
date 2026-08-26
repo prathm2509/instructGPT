@@ -35,8 +35,15 @@ def main(argv=None):
         in_colab = False
 
     if in_colab:
-        files.download(str(zip_path))
-        print("downloaded via Colab browser prompt")
+        try:
+            files.download(str(zip_path))
+            print("downloaded via Colab browser prompt")
+        except AttributeError:
+            # export.py runs as a subprocess (!python), which has no IPython
+            # kernel, so files.download cannot push to the browser here.
+            print("zip is ready - download it from the notebook cell:")
+            print("  from google.colab import files")
+            print(f"  files.download('{zip_path}')")
     else:
         print("not on Colab: grab the zip from the file browser / scp it yourself")
 
