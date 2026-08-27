@@ -31,7 +31,7 @@ from datetime import datetime
 from pathlib import Path
 
 from .common import append_jsonl, read_jsonl, utc_now, write_json
-from .conditions import CONDITIONS
+from .conditions import CONDITIONS, CONDITION_METADATA
 from .models import generate_sample, load_model
 
 DEFAULT_MAX_NEW_TOKENS = 200
@@ -147,6 +147,8 @@ def main(argv=None):
         "system_prompt": args.system_prompt,
         "quantize": args.quantize,
     }
+    if args.condition in CONDITION_METADATA:
+        config["condition_metadata"] = CONDITION_METADATA[args.condition]
     write_json(output_dir / "config.json", config)
     print(f"run dir: {output_dir}")
 
