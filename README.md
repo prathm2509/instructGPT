@@ -133,4 +133,53 @@ already present are skipped (error cells are retried). Fresh-dir runs are
 unchanged.
 
 
+## E1: label-corruption ablation (the icl-why experiment)
+
+Plan: `../icl-why/PLAN.md` (E1) · protocol: `../research/experiments/2026-08-28-icl-e1-label-corruption.md`.
+A Min et al. (2022) mini-replication on the frozen benchmark: `few_shot`,
+`few_shot_random_label`, `few_shot_format_only` on `Qwen/Qwen2.5-1.5B` base,
+greedy, 200 tokens, 4-bit. The `direct` arm **reuses** the graded
+`runs/20260826-direct-q4` run — the frozen seed policy makes a fresh direct run
+bit-identical, so regenerating it would waste GPU.
+
+Runs land on Google Drive (`E1_ROOT`, default
+`/content/drive/MyDrive/icl-why/e1`) together with the HF model cache
+(`HF_HOME`), so a Colab disconnect loses nothing: rerunning the same command
+resumes into the same run dir, across sessions. Each condition is an
+independent ~7–9 min chunk on a T4; the whole thing is ~30 min.
+
+On a GPU Colab runtime (mount Drive **before** running the script):
+
+```
+!git clone https://github.com/prathm2509/instructGPT.git   # or pull your branch
+%cd instructGPT
+```
+
+```
+from google.colab import drive; drive.mount('/content/drive')
+```
+
+```
+!bash colab/run_e1.sh                 # setup + smoke + 3 condition runs + grade + zip
+!bash colab/run_e1.sh --smoke-only    # stop after the 9-cell smoke check
+```
+
+Then analyze locally (no GPU; run dirs synced back from Drive):
+
+```
+python ../icl-why/e1_label_corruption/analyze_e1.py \
+  --run-dir runs/20260826-direct-q4 \
+  --run-dir <E1_ROOT>/runs/<id>-e1-few_shot \
+  --run-dir <E1_ROOT>/runs/<id>-e1-few_shot_random_label \
+  --run-dir <E1_ROOT>/runs/<id>-e1-few_shot_format_only
+```
+
+Tooling added for this experiment:
+
+| File | What it is |
+|---|---|
+| `colab/run_e1.sh` | the E1 pipeline (smoke → per-condition runs → dedup → grade → zip), Drive-persistent and resume-safe |
+| `../icl-why/e1_label_corruption/analyze_e1.py` | offline analysis: accuracy table + per-category matrix + headline bar chart + results JSON |
+
+
    just a note: i do use ai to format these properly but most of the findings are through my experimentation. (just putting it out there to be completely candid to myself on this learning journey)

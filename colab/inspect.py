@@ -55,7 +55,11 @@ def checklist(run_dir, config, records, predictions):
     for rec in records:
         tail = rec["prompt_text"][-90:].replace("\n", " / ")
         print(f"[{rec['model_id']} pid={rec['problem_id']}] prompt tail: ...{tail}")
-    print("\ncheck: prompt tail ends with 'Think step by step...' (not 'Answer:'),")
+    condition = config.get("condition", "")
+    if condition == "cot":
+        print("\ncheck: prompt tail ends with 'Think step by step...' (not 'Answer:'),")
+    else:
+        print("\ncheck: prompt tail ends with the task prompt after the demonstrations,")
     print("completions are not all truncated at max_new_tokens, and parse statuses")
     print("still find a final answer after the chain.")
 

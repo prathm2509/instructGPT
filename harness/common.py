@@ -40,12 +40,23 @@ def append_jsonl(path, record):
 
 
 def read_jsonl(path):
+    """Read records; tolerate a truncated final line.
+
+    append_jsonl flushes per record, but a hard kill (Colab disconnect) can
+    still leave a half-written last line. Skipping it is safe: the generation
+    runner's resume logic keys on successful records, so the lost cell is
+    regenerated on the next run instead of crashing the resume scan / grading.
+    """
     records = []
     with path.open(encoding="utf-8") as handle:
         for line in handle:
             line = line.strip()
-            if line:
+            if not line:
+                continue
+            try:
                 records.append(json.loads(line))
+            except json.JSONDecodeError:
+                print(f"warning: {path}: skipping truncated/unreadable JSONL line")
     return records
 
 
