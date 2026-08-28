@@ -31,7 +31,9 @@ MAX_TOKENS=200
 CONDITIONS=(few_shot few_shot_random_label few_shot_format_only)
 
 E1_ROOT="${E1_ROOT:-/content/drive/MyDrive/icl-why/e1}"
-DEFAULT_ROOT="/content/drive/MyDrive/icl-why/e1"
+# Presence test uses the PARENT of E1_ROOT (the mount point), not E1_ROOT
+# itself: on a fresh Drive the folder does not exist until mkdir -p below.
+E1_PARENT="$(dirname "$E1_ROOT")"
 
 SMOKE_ONLY=0
 SKIP_ZIP=0
@@ -47,14 +49,14 @@ mkdir -p runs
 
 # Persistent root: Drive when mounted, local fallback otherwise (still
 # resume-safe within the session, but wiped on runtime recycle).
-if [[ -d "$E1_ROOT" ]]; then
-    export HF_HOME="${HF_HOME:-$E1_ROOT/hf-cache}"
+if [[ -d "$E1_PARENT" ]]; then
     mkdir -p "$E1_ROOT/runs" "$E1_ROOT/zips"
+    export HF_HOME="${HF_HOME:-$E1_ROOT/hf-cache}"
     echo "persistent root: $E1_ROOT (hf cache: $HF_HOME)"
 else
     E1_ROOT="runs/e1"
     mkdir -p "$E1_ROOT/runs" "$E1_ROOT/zips"
-    echo "WARNING: $DEFAULT_ROOT not found - is Drive mounted?"
+    echo "WARNING: $E1_PARENT not found - is Drive mounted?"
     echo "         Falling back to LOCAL $E1_ROOT (not disconnect-safe)."
 fi
 
