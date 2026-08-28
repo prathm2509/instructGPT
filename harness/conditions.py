@@ -51,6 +51,17 @@ def _demonstration_blocks(prefix):
     return prefix.rstrip().split("\n\n")
 
 
+def _prefix_tail(prefix):
+    """Trailing blank line(s) after the last demonstration (normally "\\n\\n").
+
+    _demonstration_blocks strips them for splitting; they must be restored
+    when rebuilding the prefix, otherwise the last demonstration's answer is
+    glued straight onto the task prompt — a format change the corrupted
+    conditions must not introduce on top of the label manipulation.
+    """
+    return prefix[len(prefix.rstrip()):]
+
+
 def _answer_parts(block):
     lines = block.splitlines()
     for index, line in enumerate(lines):
@@ -71,7 +82,8 @@ def _replace_answer(block, value):
 
 def few_shot_format_only_prompt(task):
     blocks = _demonstration_blocks(task["few_shot_prefix"])
-    return "\n\n".join(_replace_answer(block, "?") for block in blocks) + task["prompt"]
+    transformed = [_replace_answer(block, "?") for block in blocks]
+    return "\n\n".join(transformed) + _prefix_tail(task["few_shot_prefix"]) + task["prompt"]
 
 
 def few_shot_random_label_prompt(task):
@@ -85,7 +97,7 @@ def few_shot_random_label_prompt(task):
     shuffled = list(answers)
     random.Random(E1_LABEL_PERMUTATION_SEED + int(task["id"])).shuffle(shuffled)
     transformed = [_replace_answer(block, value) for block, value in zip(blocks, shuffled)]
-    return "\n\n".join(transformed) + task["prompt"]
+    return "\n\n".join(transformed) + _prefix_tail(task["few_shot_prefix"]) + task["prompt"]
 
 
 # Registered but not part of the frozen baseline. self_consistency is a grading

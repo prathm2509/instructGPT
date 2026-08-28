@@ -25,6 +25,12 @@ class ConditionTests(unittest.TestCase):
             self.assertTrue(prompt.endswith(task["prompt"]))
             prefix = prompt[: -len(task["prompt"])]
             self.assertGreaterEqual(prefix.count("?"), 1)
+            # The task prompt stays visually separated, as in the clean prompt.
+            self.assertTrue(
+                prompt.endswith("\n\n" + task["prompt"]),
+                f"task {task['id']}: blank line between last demonstration and "
+                f"task prompt was lost",
+            )
 
     def test_random_label_is_deterministic_and_preserves_structure(self):
         for task in self.tasks:
@@ -34,6 +40,11 @@ class ConditionTests(unittest.TestCase):
             prefix = first[: -len(task["prompt"])]
             original_prefix = task["few_shot_prefix"]
             self.assertEqual(prefix.count("Answer:"), original_prefix.count("Answer:"))
+            self.assertTrue(
+                first.endswith("\n\n" + task["prompt"]),
+                f"task {task['id']}: blank line between last demonstration and "
+                f"task prompt was lost",
+            )
 
 
 if __name__ == "__main__":
